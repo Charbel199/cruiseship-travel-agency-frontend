@@ -5,7 +5,7 @@ export interface Customer {
   customerDateOfBirth: string;
   customerGender: string;
   customerAddress: string;
-  customerTelephone: string;
+  customerTelephoneNumber: string;
   customerEmail: string;
   customerPassword: string;
 }
