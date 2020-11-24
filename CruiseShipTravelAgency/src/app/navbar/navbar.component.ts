@@ -18,7 +18,32 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  testcruiseships(): void {
+    this.cruiseShipService.getAllCruiseShips().subscribe(res=>{
+      console.log(res);
+    })
+  }
+  testcruiseship(): void {
+    this.cruiseShipService.getCruiseShip(1).subscribe(res=>{
+      console.log(res);
+    })
+  }
+  testcrewmembers(): void {
+    this.cruiseShipService.getCruiseShipCrewMembers(1).subscribe(res=>{
+      console.log(res);
+    });
+  }
+  testcruiseshipratings(): void {
+    this.cruiseShipService.getCruiseShipRatings(1).subscribe(res=>{
+      console.log(res);
+    })
+  }
 
+  testcruiseshiptravelplans(): void {
+    this.cruiseShipService.getCruiseShipTravelPlans(1).subscribe(res=>{
+      console.log(res);
+    })
+  }
 
 
   testregister(): void{
