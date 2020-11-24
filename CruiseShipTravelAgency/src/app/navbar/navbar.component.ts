@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomerService} from '../services/customer.service';
 import {Customer} from '../models/customer';
+import {CruiseShipService} from '../services/cruise-ship.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,18 +11,15 @@ import {Customer} from '../models/customer';
 export class NavbarComponent implements OnInit {
 
   constructor(
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private cruiseShipService: CruiseShipService
   ) { }
 
   ngOnInit(): void {
   }
 
 
-  testcruiseship(): void{
-    this.customerService.testcruiseship().subscribe(res => {
-       console.log(res.data.cruiseships);
-      });
-  }
+
 
   testregister(): void{
     const customer: Customer = {
@@ -29,32 +27,50 @@ export class NavbarComponent implements OnInit {
       customerLastName: 'lastnameangular',
       customerAddress: 'fanar',
       customerDateOfBirth: '2000',
-      customerEmail: 'angularabed@yahoo.com',
+      customerEmail: 'angularabedtester@yahoo.com',
       customerGender: 'M',
       customerTelephoneNumber: '03538123',
       customerPassword: 'angularpassword',
       customerId: 0
     };
-    this.customerService.testregister(customer).subscribe(res => {
+    this.customerService.register(customer).subscribe(res => {
       console.log(res);
-    });
+    },
+      error => {},
+      () => {
+      this.customerService.updateLoginStatus();
+      });
   }
 
-  testlogin(): void{
+  amiloggedin(): void{
+    console.log('IS LOGGED IN: ');
+    console.log(this.customerService.getIsLoggedIn());
+    console.log('CUSTOMER: ');
+    console.log(this.customerService.getLoggedInCustomer());
+  }
+
+  login(): void{
     const options = {
       customerEmail: 'angularabed@yahoo.com',
       customerPassword: 'angularpassword'
     };
-    this.customerService.testlogin(options.customerEmail, options.customerPassword).subscribe(res => {
+    this.customerService.login(options.customerEmail, options.customerPassword).subscribe(res => {
       console.log(res);
-    });
-
+    },
+      error => {},
+      () => {
+      this.customerService.updateLoginStatus();
+      });
   }
 
 
-  testlogout(): void{
-    this.customerService.testlogout().subscribe(res => {
+  logout(): void{
+    this.customerService.logout().subscribe(res => {
       console.log(res);
-    });
+    },
+      error => {},
+      () => {
+      this.customerService.updateLoginStatus();
+      });
   }
 }

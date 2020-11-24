@@ -10,40 +10,68 @@ import {Customer} from '../models/customer';
   providedIn: 'root'
 })
 export class CustomerService {
-
+  IS_LOGGED_IN = false;
+  loggedInCustomer: Customer;
+  API_URL = 'http://localhost:8080/';
   constructor(
     private httpClient: HttpClient
   ) {
-  }
 
-  testcruiseship(): Observable<CruiseShipApiResponse> {
-    return this.httpClient.get<CruiseShipApiResponse>('http://localhost:8080/cruiseships/1',{
+  }
+    checkIfLoggedIn(): Observable<CustomerApiResponse>{
+      return this.httpClient.get<CustomerApiResponse>('http://localhost:8080/login', {
+        withCredentials: true,
+      });
+    }
+
+    updateLoginStatus(): void{
+      this.checkIfLoggedIn().subscribe(res => {
+        this.IS_LOGGED_IN = true;
+        this.loggedInCustomer = res.data.customer;
+      },
+        error => {
+          this.IS_LOGGED_IN = false;
+          this.loggedInCustomer = undefined;
+        });
+    }
+
+    getLoggedInCustomer(): Customer{
+      return this.loggedInCustomer;
+    }
+    getIsLoggedIn(): boolean{
+      return this.IS_LOGGED_IN;
+    }
+
+    logout() {
+    const logoutrequest =  this.httpClient.post(this.API_URL + 'logout', {} , {
       withCredentials: true,
     });
-  }
-
-  testregister(customer: Customer): Observable<CustomerApiResponse> {
-    return this.httpClient.post<CustomerApiResponse>('http://localhost:8080/register', customer, {
-      withCredentials: true,
-    });
-  }
-
-  testlogin(customerEmail, customerPassword): Observable<CustomerApiResponse> {
+    return logoutrequest;
+    }
+    login(customerEmail, customerPassword): Observable<CustomerApiResponse> {
     const options = {
       customerEmail,
       customerPassword
     };
-
-    return this.httpClient.post<CustomerApiResponse>('http://localhost:8080/login', options, {
+    const loginrequest = this.httpClient.post<CustomerApiResponse>(this.API_URL + 'login', options, {
       withCredentials: true,
     });
+    return loginrequest;
 
   }
-
-  testlogout(){
-    return this.httpClient.post('http://localhost:8080/logout', {} , {
+    register(customer: Customer): Observable<CustomerApiResponse> {
+    return this.httpClient.post<CustomerApiResponse>(this.API_URL + 'register', customer, {
       withCredentials: true,
     });
   }
+
+
+
+
+
+
+
+
+
 
 }

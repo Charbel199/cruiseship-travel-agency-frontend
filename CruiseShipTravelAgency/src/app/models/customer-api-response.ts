@@ -5,6 +5,6 @@ export interface CustomerApiResponse {
   status: string;
   message: string;
   data: {
-    customer: Array<Customer>;
+    customer: Customer;
   };
 }
