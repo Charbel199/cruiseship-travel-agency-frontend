@@ -4,8 +4,7 @@ export interface Stop {
   stopDestination: string;
   stopGoogleURL: string;
   stopPictureURL: string;
-  stopArrivalDate: string;
-  stopDepartureDate: string;
+  stopDuration: number;
   stopRank: number;
 
 }
