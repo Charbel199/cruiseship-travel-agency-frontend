@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 import {Observable} from 'rxjs';
-import {CruiseShipApiResponse} from '../models/cruise-ship-api-response';
 import {CustomerApiResponse} from '../models/customer-api-response';
 import {Customer} from '../models/customer';
 
@@ -19,7 +18,7 @@ export class CustomerService {
 
   }
     checkIfLoggedIn(): Observable<CustomerApiResponse>{
-      return this.httpClient.get<CustomerApiResponse>('http://localhost:8080/login', {
+      return this.httpClient.get<CustomerApiResponse>(this.API_URL + 'login', {
         withCredentials: true,
       });
     }
@@ -43,22 +42,20 @@ export class CustomerService {
     }
 
     logout() {
-    const logoutrequest =  this.httpClient.post(this.API_URL + 'logout', {} , {
+    return this.httpClient.post(this.API_URL + 'logout', {} , {
       withCredentials: true,
     });
-    return logoutrequest;
+
     }
     login(customerEmail, customerPassword): Observable<CustomerApiResponse> {
     const options = {
       customerEmail,
       customerPassword
     };
-    const loginrequest = this.httpClient.post<CustomerApiResponse>(this.API_URL + 'login', options, {
+    return this.httpClient.post<CustomerApiResponse>(this.API_URL + 'login', options, {
       withCredentials: true,
     });
-    return loginrequest;
-
-  }
+   }
     register(customer: Customer): Observable<CustomerApiResponse> {
     return this.httpClient.post<CustomerApiResponse>(this.API_URL + 'register', customer, {
       withCredentials: true,
