@@ -6,6 +6,8 @@ import {TravelPlanService} from '../services/travel-plan.service';
 import {Rating} from '../models/rating';
 import {CruiseShipRating} from '../models/cruise-ship-rating';
 import {TravelPlanRating} from '../models/travel-plan-rating';
+import {ReservationService} from '../services/reservation.service';
+import {Reservation} from '../models/reservation';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +19,8 @@ export class NavbarComponent implements OnInit {
   constructor(
     private customerService: CustomerService,
     private cruiseShipService: CruiseShipService,
-    private travelPlanService: TravelPlanService
+    private travelPlanService: TravelPlanService,
+    private reservationService: ReservationService
   ) { }
 
   ngOnInit(): void {
@@ -152,6 +155,24 @@ export class NavbarComponent implements OnInit {
   }
   testgetroom(): void {
     this.cruiseShipService.getRoom(1).subscribe(res => {
+      console.log(res);
+    })
+  }
+
+  testgetreservations(): void {
+    this.reservationService.getAllReservations().subscribe(res => {
+      console.log(res);
+    })
+  }
+
+  testmakereservations(): void {
+    const reservation: Reservation = {
+      departureDate: '2020-12-21',
+      reservationPrice: 3200,
+      reservationRoomId: 1,
+      reservationTravelPlanId: 1
+    };
+    this.reservationService.createReservation(reservation).subscribe( res => {
       console.log(res);
     })
   }
