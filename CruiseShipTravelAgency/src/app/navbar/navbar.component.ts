@@ -95,9 +95,7 @@ export class NavbarComponent implements OnInit {
 
   amiloggedin(): void{
     console.log('IS LOGGED IN: ');
-    console.log(this.customerService.getIsLoggedIn());
-    console.log('CUSTOMER: ');
-    console.log(this.customerService.getLoggedInCustomer());
+    console.log(this.customerService.IS_LOGGED_IN);
   }
 
   login(): void{

@@ -198,6 +198,17 @@ body {
 .form-group {
   overflow: hidden;
   margin-bottom: 20px; }
+.dropdown-menu{
+
+}
+
+.custom-select{
+  height: 55px;
+}
+
+
+
+
 
 .form-input {
   width: 100%;

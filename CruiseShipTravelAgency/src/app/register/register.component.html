@@ -7,14 +7,50 @@
       <div class="signup-content">
 
           <h2 class="form-title">Create account</h2>
+        <div class="row row-space">
+          <div class="col-sm">
           <div class="form-group">
-            <input type="text" class="form-input" [ngModel]="firstname" placeholder="First Name"/>
+            <input type="text" class="form-input" [(ngModel)]="customer.customerFirstName" placeholder="First Name"/>
           </div>
-          <div class="form-group">
-            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
           </div>
+          <div class="col-sm">
           <div class="form-group">
-            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+            <input type="text" class="form-input" [(ngModel)]="customer.customerLastName" placeholder="Last Name"/>
+          </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-input" [(ngModel)]="customer.customerEmail" placeholder="Email Address"/>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-input" [(ngModel)]="customer.customerAddress" placeholder="Address"/>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-input" [(ngModel)]="customer.customerTelephoneNumber" placeholder="Telephone Number"/>
+        </div>
+
+        <div class="row row-space">
+          <div class="col-sm">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="customer.customerGender">
+            <option selected disabled>Gender</option>
+            <option [ngValue]="'M'">Male</option>
+            <option [ngValue]="'F'">Female</option>
+          </select>
+        </div>
+          </div>
+          <div class="col-sm">
+            <select class="custom-select" [(ngModel)]="customer.customerDateOfBirth" >
+              <option selected disabled>Year of Birth</option>
+              <option *ngFor="let date of dates" [ngValue]="date" >{{date}}</option>
+            </select>
+          </div>
+        </div>
+
+
+          <div class="form-group">
+            <input type="password" class="form-input" [(ngModel)]="customer.customerPassword" placeholder="Password"/>
             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
           </div>
           <div class="form-group">
@@ -22,15 +58,14 @@
           </div>
           <div class="form-group">
             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to all <a href="#" class="term-service">Terms of service</a></label>
           </div>
           <div class="form-group">
-            <input type="submit" (click)="checkfirstname()" class="form-submit" value="Sign up"/>
+            <input type="submit" (click)="register()" class="form-submit" value="Sign up"/>
           </div>
-          <p (click)="checkfirstname()">checkname</p>
 
         <p class="loginhere">
-          Have already an account ? <a href="#" class="loginhere-link">Login here</a>
+          Have already an account ? <a routerLink="/" class="loginhere-link">Login here</a>
         </p>
       </div>
     </div>
