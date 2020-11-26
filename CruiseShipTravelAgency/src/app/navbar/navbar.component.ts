@@ -16,7 +16,7 @@ import {Reservation} from '../models/reservation';
 export class NavbarComponent implements OnInit {
   testing = false;
   constructor(
-    private customerService: CustomerService,
+    public customerService: CustomerService,
     private cruiseShipService: CruiseShipService,
     private travelPlanService: TravelPlanService,
     private reservationService: ReservationService

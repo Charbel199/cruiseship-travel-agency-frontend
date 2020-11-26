@@ -42,14 +42,17 @@ img{
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
   color: #fff;
+  font-family: 'Montserrat';
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
+  font-family: 'Montserrat';
 }
 
 .navbar-toggler {
   background: #fff;
+  font-family: 'Montserrat';
 }
 
 .navbar-nav {
@@ -62,16 +65,19 @@ img{
 
 .nav-link.active,.nav-link:focus{
   color: #fff;
+  font-family: 'Montserrat';
 }
 
 .navbar-toggler {
   padding: 1px 5px;
   font-size: 18px;
   line-height: 0.3;
+  font-family: 'Montserrat';
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
   color: #fff;
+  font-family: 'Montserrat';
 }
 
 

@@ -8,30 +8,36 @@
     </button>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" routerLink="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" routerLink="/cruiseships">Cruises</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" routerLink="/about">About</a>
       </li>
     </ul>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="this.customerService.IS_LOGGED_IN">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">Profile</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="!this.customerService.IS_LOGGED_IN">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/register"> Register</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Login</a>
         </li>
       </ul>
     </div>
@@ -40,6 +46,7 @@
 
   </div>
 </nav>
+
 
 
 
