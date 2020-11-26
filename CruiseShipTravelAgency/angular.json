@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "CruiseShipTravelAgency"
+  "defaultProject": "CruiseShipTravelAgency",
+  "cli": {
+    "analytics": "3408398c-5de4-456f-92c3-4793aad1d3f6"
+  }
 }
