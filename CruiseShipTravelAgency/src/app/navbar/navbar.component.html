@@ -5,13 +5,13 @@
     </button>
     <ul class="navbar-nav ">
       <li>
-        <a class="nav-link" routerLink="/">Home</a>
+        <a class="nav-link left" routerLink="/">Home</a>
       </li>
       <li>
-        <a class="nav-link" routerLink="/cruiseships">Cruises</a>
+        <a class="nav-link left" routerLink="/cruiseships">Cruises</a>
       </li>
       <li>
-        <a class="nav-link" routerLink="/about">About</a>
+        <a class="nav-link left" routerLink="/about">About</a>
       </li>
     </ul>
 
@@ -19,10 +19,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="this.customerService.IS_LOGGED_IN">
       <ul class="navbar-nav ">
         <li>
-          <a class="nav-link" routerLink="/profile">Profile</a>
+          <a class="nav-link right" routerLink="/profile">Profile</a>
         </li>
         <li>
-          <a class="nav-link" (click)="logout()">Logout</a>
+          <a class="nav-link right" (click)="logout()">Logout</a>
         </li>
       </ul>
     </div>
@@ -31,10 +31,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent2" *ngIf="!this.customerService.IS_LOGGED_IN">
       <ul class="navbar-nav ml-auto">
         <li>
-          <a class="nav-link" routerLink="/register"> Register</a>
+          <a class="nav-link right" routerLink="/register"> Register</a>
         </li>
         <li>
-          <a class="nav-link" (click)="login()">Login</a>
+          <a class="nav-link right" (click)="login()">Login</a>
         </li>
       </ul>
     </div>
