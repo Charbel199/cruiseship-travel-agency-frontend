@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
     customerPassword: '',
     customerId: 0
   };
+  retypedPassword = '';
   dates = [];
 
   constructor(
@@ -39,6 +40,9 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
+    if(this.retypedPassword !== this.customer.customerPassword){
+      return;
+    }
     this.customerService.register(this.customer).subscribe(res => {
           this.router.navigate(['/']);
       }, error => {
