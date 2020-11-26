@@ -14,3 +14,12 @@ a{
   color: white;
 
 }
+
+.footer-gradient{
+  background-image: -moz-linear-gradient(to bottom, #343a40, #6c757d);
+  background-image: -ms-linear-gradient(to bottom, #343a40, #6c757d);
+  background-image: -o-linear-gradient(to bottom, #343a40, #6c757d);
+  background-image: -webkit-linear-gradient(to bottom, #343a40, #6c757d);
+  background-image: linear-gradient(to bottom, #343a40, #6c757d);
+}
+
