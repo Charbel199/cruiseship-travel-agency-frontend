@@ -1,49 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark">
-  <a href="#" ><img src="../../assets/JTCruises%20Logo.jpg"></a>
-  <div class="container">
-
-    <a class="navbar-brand" href="#">JT Cruises</a>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-gradient">
+    <a class="navbar-brand" routerLink="/"><img src="../../assets/JTCruises%20Logo.jpg" class="d-inline-block" style = "padding-right: 10px">JT Cruises</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/">Home</a>
+    <ul class="navbar-nav ">
+      <li>
+        <a class="nav-link left" routerLink="/">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/cruiseships">Cruises</a>
+      <li>
+        <a class="nav-link left" routerLink="/cruiseships">Cruises</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about">About</a>
+      <li>
+        <a class="nav-link left" routerLink="/about">About</a>
       </li>
     </ul>
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="this.customerService.IS_LOGGED_IN">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/profile">Profile</a>
+      <ul class="navbar-nav ">
+        <li>
+          <a class="nav-link right" routerLink="/profile">Profile</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" (click)="logout()">Logout</a>
+        <li>
+          <a class="nav-link right" (click)="logout()">Logout</a>
         </li>
       </ul>
     </div>
 
+<<<<<<< HEAD
     <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="!this.customerService.IS_LOGGED_IN">
+=======
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent2" *ngIf="!this.customerService.IS_LOGGED_IN">
+>>>>>>> c4f40832743beb43ad23554c712f34802dc3d32d
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/register"> Register</a>
+        <li>
+          <a class="nav-link right" routerLink="/register"> Register</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" (click)="login()">Login</a>
+        <li>
+          <a class="nav-link right" (click)="login()">Login</a>
         </li>
       </ul>
     </div>
 
 
 
-  </div>
 </nav>
 
 
