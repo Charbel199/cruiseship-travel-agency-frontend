@@ -205,6 +205,12 @@ body {
 .custom-select{
   height: 55px;
 }
+.custom-select:required:invalid{
+  color: gray;
+}
+.custom-select, option{
+  color: black;
+}
 
 
 

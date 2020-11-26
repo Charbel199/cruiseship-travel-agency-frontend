@@ -33,16 +33,16 @@
         <div class="row row-space">
           <div class="col-sm">
         <div class="form-group">
-          <select class="custom-select" [(ngModel)]="customer.customerGender">
-            <option selected disabled>Gender</option>
+          <select class="custom-select" [(ngModel)]="customer.customerGender" required>
+            <option value = "" selected disabled hidden>Gender</option>
             <option [ngValue]="'M'">Male</option>
             <option [ngValue]="'F'">Female</option>
           </select>
         </div>
           </div>
           <div class="col-sm">
-            <select class="custom-select" [(ngModel)]="customer.customerDateOfBirth" >
-              <option selected disabled>Year of Birth</option>
+            <select class="custom-select" [(ngModel)]="customer.customerDateOfBirth" required >
+              <option value = "" disabled selected hidden>Year of Birth</option>
               <option *ngFor="let date of dates" [ngValue]="date" >{{date}}</option>
             </select>
           </div>
