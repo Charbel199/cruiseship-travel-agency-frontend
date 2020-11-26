@@ -3,7 +3,6 @@ import {CustomerService} from '../services/customer.service';
 import {Customer} from '../models/customer';
 import {CruiseShipService} from '../services/cruise-ship.service';
 import {TravelPlanService} from '../services/travel-plan.service';
-import {Rating} from '../models/rating';
 import {CruiseShipRating} from '../models/cruise-ship-rating';
 import {TravelPlanRating} from '../models/travel-plan-rating';
 import {ReservationService} from '../services/reservation.service';
@@ -15,7 +14,7 @@ import {Reservation} from '../models/reservation';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  testing = false;
   constructor(
     private customerService: CustomerService,
     private cruiseShipService: CruiseShipService,
