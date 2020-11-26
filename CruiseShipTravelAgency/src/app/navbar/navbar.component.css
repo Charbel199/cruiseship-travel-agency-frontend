@@ -1,6 +1,6 @@
 img{
   width: 50px;
-  height: 50px;
+  height: auto;
   display: block;
 }
 
@@ -82,6 +82,7 @@ img{
   font-weight: bold;
   cursor: pointer;
   font-family: 'Montserrat';
+  float: right;
 }
 
 .navbar-light .navbar-nav .nav-link.left:hover{
@@ -100,8 +101,6 @@ img{
   background-image: -webkit-linear-gradient(to right, #343a40, #6c757d);
   background-image: linear-gradient(to right, #343a40, #6c757d);
 }
-
-
 
 
 
