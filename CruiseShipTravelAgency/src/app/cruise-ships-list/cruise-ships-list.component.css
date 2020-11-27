@@ -8,7 +8,32 @@
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-caption {
+  bottom: 270px;
+}
 
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-caption p {
+  width: 75%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background: #112233;
@@ -16,16 +41,16 @@ body {
 
 .weather-card {
   margin: 60px auto;
-  height: 90;
-  width: 950px;
+  height: 500px;
+  width: 650px;
   background: #fff;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 .weather-card .top {
   position: relative;
-  height: 570px;
-  width: 100%;
+  height: 370px;
+  width: 650px;
   overflow: hidden;
   background: url("../../assets/registerBg.jpg") no-repeat;
   background-size: cover;
@@ -33,7 +58,7 @@ body {
   text-align: center;
 }
 .weather-card .top .wrapper {
-  padding: 30px;
+  padding: 15px;
   position: relative;
   z-index: 1;
 }
