@@ -357,6 +357,10 @@ input[type=checkbox]:not(old):checked + label > span:before {
   font-weight: 700;
   color: #222; }
 
+.loginhere-link:hover {
+  cursor: pointer;
+}
+
 .field-icon {
   float: right;
   margin-right: 17px;
