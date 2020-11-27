@@ -16,10 +16,12 @@
 
     <div class="navbar-nav right ml-auto " *ngIf="!this.customerService.IS_LOGGED_IN">
           <a class="nav-link right" routerLink="/register"> Register</a>
-          <a class="nav-link right" (click)="login()">Login</a>
+          <a class="nav-link right" data-toggle="modal" data-target="#elegantModalForm">Login</a>
     </div>
 
 </nav>
+<app-login></app-login>
+
 
 
 
