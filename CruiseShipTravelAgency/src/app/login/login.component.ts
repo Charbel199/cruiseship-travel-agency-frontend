@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       console.log('Error');
       },
       () => {
+      console.log('Completed login');
       this.customerService.updateLoginStatus();
       });
   }
