@@ -102,6 +102,12 @@ img{
   background-image: linear-gradient(to right, #343a40, #6c757d);
 }
 
+.line {
+  border-right: 1px solid white;
+  height: 30px;
+  padding-right: 10px;
+}
+
 
 
 

@@ -103,6 +103,8 @@ export class NavbarComponent implements OnInit {
       customerEmail: 'angularabed@yahoo.com',
       customerPassword: 'angularpassword'
     };
+    const firstName : string = this.customerService.loggedInCustomer.customerFirstName;
+
     this.customerService.login(options.customerEmail, options.customerPassword).subscribe(res => {
       console.log(res);
     },
