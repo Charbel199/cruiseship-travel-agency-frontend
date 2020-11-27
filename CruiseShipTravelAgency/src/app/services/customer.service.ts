@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {CustomerApiResponse} from '../models/customer-api-response';
 import {Customer} from '../models/customer';
+import {take} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,17 +19,22 @@ export class CustomerService {
 
   }
     checkIfLoggedIn(): Observable<CustomerApiResponse>{
+    console.log('Sending ping')
       return this.httpClient.get<CustomerApiResponse>(this.API_URL + 'login', {
         withCredentials: true,
       });
     }
 
     updateLoginStatus(): void{
-      this.checkIfLoggedIn().subscribe(res => {
+      this.checkIfLoggedIn().pipe(take(1))
+        .subscribe(res => {
+        console.log(' I AM LOGGED IN ');
+        console.log(res);
         this.IS_LOGGED_IN = true;
         this.loggedInCustomer = res.data.customer;
       },
         error => {
+          console.log(' I AM NOT LOGGED IN ');
           this.IS_LOGGED_IN = false;
           this.loggedInCustomer = undefined;
         });

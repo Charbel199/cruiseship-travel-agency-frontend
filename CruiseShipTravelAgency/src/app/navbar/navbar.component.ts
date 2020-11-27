@@ -23,6 +23,7 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.customerService.updateLoginStatus();
   }
 
   testcruiseships(): void {
@@ -118,10 +119,13 @@ export class NavbarComponent implements OnInit {
   logout(): void{
     this.customerService.logout().subscribe(res => {
       console.log(res);
-    },
+      this.customerService.IS_LOGGED_IN = false;
+      this.customerService.loggedInCustomer = undefined;
+      },
       error => {},
       () => {
       this.customerService.updateLoginStatus();
+
       });
   }
 
