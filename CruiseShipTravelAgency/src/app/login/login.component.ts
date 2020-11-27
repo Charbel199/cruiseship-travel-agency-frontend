@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {CustomerService} from '../services/customer.service';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +10,28 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   customerEmail: string;
   customerPassword: string;
-  constructor() { }
+  constructor(
+    private router: Router,
+    private customerService: CustomerService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(
+
+  ): void {
   }
   login(): void {
+    this.customerService.login(this.customerEmail, this.customerPassword).subscribe( res => {
+      console.log('Logged in');
+      this.router.navigate(['/']);
+    }, error => {
+      console.log('Error');
+      },
+      () => {
+      this.customerService.updateLoginStatus();
+      });
+  }
 
+  goToRegister(): void{
+    this.router.navigate(['/register']);
   }
 }

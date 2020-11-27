@@ -11,12 +11,12 @@
 
     <div class="navbar-nav ml-auto" *ngIf="this.customerService.IS_LOGGED_IN">
           <a class="nav-link right" routerLink="/profile">Profile</a>
-          <a class="nav-link right" (click)="logout()">Logout</a>
+          <a class="nav-link right" (click)="logout()">Log Out</a>
     </div>
 
     <div class="navbar-nav right ml-auto " *ngIf="!this.customerService.IS_LOGGED_IN">
           <a class="nav-link right" routerLink="/register"> Register</a>
-          <a class="nav-link right" data-toggle="modal" data-target="#elegantModalForm">Login</a>
+          <a class="nav-link right" data-toggle="modal" data-target="#elegantModalForm">Log In</a>
     </div>
 
 </nav>
