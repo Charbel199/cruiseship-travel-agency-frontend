@@ -10,6 +10,7 @@ import {take} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CustomerService {
+
   IS_LOGGED_IN = false;
   loggedInCustomer: Customer;
   API_URL = 'http://localhost:8080/';
@@ -67,6 +68,8 @@ export class CustomerService {
       withCredentials: true,
     });
   }
+
+
 
 
 

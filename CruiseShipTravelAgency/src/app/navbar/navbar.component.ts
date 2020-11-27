@@ -22,7 +22,8 @@ export class NavbarComponent implements OnInit {
     private reservationService: ReservationService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+    console.log(this.customerService.getIsLoggedIn());
     this.customerService.updateLoginStatus();
   }
 
