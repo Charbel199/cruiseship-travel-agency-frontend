@@ -17,7 +17,7 @@
              [style.background]="'url(' + ship.shipPictureURL + ') no-repeat center center '"
              [style.background-size]="'cover'">
           <div class="wrapper">
-            <a class="ship-info" routerLink="/shipInfo"><img src="../../assets/Info.svg" style="width: 20px; height: 20px"></a>
+            <a class="ship-info" routerLink="/shipInfo{{ship.shipId}}"><img src="../../assets/Info.svg" style="width: 20px; height: 20px"></a>
             <h1 class="heading">{{ship.shipName}}</h1>
           </div>
         </div>
@@ -38,7 +38,8 @@
               <div class="accordion-container">
 
                 <div class="img-accordion">
-                  <div class="img" *ngFor="let travelPlan of shipTravelPlans[i*2+j]" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'">
+                  <div class="img" *ngFor="let travelPlan of shipTravelPlans[i*2+j]" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'"
+                  routerLink="/planInfo{{travelPlan.travelPlanId}}">
                     <p class="price">${{travelPlan.travelPlanPrice}}</p>
                     <p>{{travelPlan.travelPlanRegion}}</p>
                   </div>
