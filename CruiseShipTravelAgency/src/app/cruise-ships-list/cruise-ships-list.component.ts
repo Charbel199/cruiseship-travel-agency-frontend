@@ -8,6 +8,7 @@ import {CruiseShip} from '../models/cruise-ship';
   templateUrl: './cruise-ships-list.component.html',
   styleUrls: ['./cruise-ships-list.component.css']
 })
+
 export class CruiseShipsListComponent implements OnInit {
   ships = [];
   shipsPairs = [];
@@ -58,8 +59,10 @@ export class CruiseShipsListComponent implements OnInit {
   for(var a = 0;a<this.ships.length;a++){
     this.cruiseShipService.getCruiseShipTravelPlans(this.ships[a].shipId).subscribe(res =>{
       this.shipTravelPlans.push(res.data.travelplans);
+      console.log(res)
     })
   }
+
  }
 
 }

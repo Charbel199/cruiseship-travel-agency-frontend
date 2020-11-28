@@ -1,25 +1,35 @@
+
 <div class="demo-title">
-  <h1 class="display-1">Cruise Ships</h1>
+  <img class= "topBG" src="../../assets/shipsBg.jpg" >
+  <h1 class="main-title">Cruise Ships</h1>
+  <h2 class="sub-title">A world awaits, we'll help you find it.</h2>
 </div>
 
 <div class="container-fluid" *ngIf="shipsPairs">
 
   <div class="row" *ngFor="let shipPair of shipsPairs; let i = index">
     <div class="col" *ngFor="let ship of shipPair; let j = index">
-      <div class="weather-card one"
-           style="background: url('../../assets/The Grand ACG.jpg') no-repeat;
-           background-size: cover;
-           background-position: center center;">
-        <div class="top " data-toggle="collapse" href="#accordion1" role="button" aria-expanded="false"
-             aria-controls="accordion1">
+      <div class="card one" >
+        <div class="top "
+             data-toggle="collapse" aria-expanded="false"
+             [attr.href] = "'#accordion' + (i*2+j)"
+             [attr.aria-controls]="'accordion' +(i*2+j)"
+             [style.background]="'url(' + ship.shipPictureURL + ') no-repeat center center '"
+             [style.background-size]="'cover'">
           <div class="wrapper">
+            <a class="ship-info" routerLink="/shipInfo"><img src="../../assets/Info.svg" style="width: 20px; height: 20px"></a>
             <h1 class="heading">{{ship.shipName}}</h1>
           </div>
         </div>
         <div class="bottom">
           <div class="wrapper">
-
-            <div class="collapse" id="accordion1">
+            <div class="collapse" [id]="'accordion' + (i*2+j)">
+              <ul class="forecast">
+                <li class="subtitle active">Ship Brief</li>
+                <li class="active">
+                  {{ship.shipEntertainmentInfo}}
+                </li>
+              </ul>
               <ul class="forecast">
                 <li class="subtitle active">
                   Travel Plans
@@ -28,18 +38,14 @@
               <div class="accordion-container">
 
                 <div class="img-accordion">
-                  <div class="img" style="background-image: url('../../assets/thailand.jpg');" *ngFor="let travelPlan of shipTravelPlans[i*2+j]">
+                  <div class="img" *ngFor="let travelPlan of shipTravelPlans[i*2+j]" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'">
+                    <p class="price">${{travelPlan.travelPlanPrice}}</p>
                     <p>{{travelPlan.travelPlanRegion}}</p>
                   </div>
                 </div>
 
               </div>
-              <ul class="forecast">
-                <li class="subtitle active">Ship Brief</li>
-                <li class="active">
-                  {{ship.shipEntertainmentInfo}}
-                </li>
-              </ul>
+
             </div>
           </div>
         </div>

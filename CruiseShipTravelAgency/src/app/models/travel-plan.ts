@@ -3,6 +3,7 @@ export interface TravelPlan {
   travelPlanDescription: string;
   travelPlanRegion: string;
   travelPlanPrice: number;
+  travelPlanPictureURL: string;
   shipId: number;
   departureDate: string;
   returnDate: string;

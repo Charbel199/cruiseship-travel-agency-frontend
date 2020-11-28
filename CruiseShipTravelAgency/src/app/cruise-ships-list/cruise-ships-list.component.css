@@ -2,10 +2,35 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 *{ margin: 0; padding: 0; box-sizing: border-box; }
-.demo-title {
-  text-align: center;
-  color: #808080;
+
+.topBG{
+  width: 100%;
 }
+h1{
+  font-size: 9rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-shadow: 3px 3px #343a40;
+}
+h2{
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-shadow: 3px 3px #343a40;
+}
+.main-title{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sub-title{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .row-md{
   padding: 20px;
 }
@@ -14,95 +39,66 @@ body {
   background: #112233;
 }
 
-.weather-card {
+.card {
   margin: 60px auto;
   width: 650px;
   background: #fff;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
-.weather-card:hover{
+.card:hover{
 
 }
-.weather-card.one .top {
+.card .top {
   position: relative;
   height: 470px;
   width: 100%;
   overflow: hidden;
-
-
   text-align: center;
-}
-.weather-card.two .top {
-  position: relative;
-  height: 470px;
-  width: 100%;
-  overflow: hidden;
-  background: url("../../assets/The Titanic.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
-  text-align: center;
-}
-.weather-card.three .top {
-  position: relative;
-  height: 470px;
-  width: 100%;
-  overflow: hidden;
-  background: url("../../assets/The Grand ACG.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
 }
 
-.weather-card .top .wrapper {
+.card .top .wrapper {
   padding: 30px;
   position: relative;
   z-index: 1;
 }
-.weather-card .top .wrapper .mynav {
-  height: 20px;
-}
-.weather-card .top .wrapper .mynav .lnr {
-  color: #fff;
-  font-size: 20px;
-}
-.weather-card .top .wrapper .mynav .lnr-chevron-left {
-  display: inline-block;
-  float: left;
-}
-.weather-card .top .wrapper .mynav .lnr-cog {
+
+.card .top .wrapper .ship-info {
+  top: 0;
   display: inline-block;
   float: right;
 }
-.weather-card .top .wrapper .heading {
+.card .top .wrapper .heading {
   margin-top: 20px;
   font-size: 35px;
   font-weight: 400;
   color: #fff;
 }
-.weather-card .top .wrapper .location {
+.card .top .wrapper .location {
   margin-top: 20px;
   font-size: 21px;
   font-weight: 400;
   color: #fff;
 }
-.weather-card .top .wrapper .temp {
+.card .top .wrapper .temp {
   margin-top: 20px;
 }
-.weather-card .top .wrapper .temp a {
+.card .top .wrapper .temp a {
   text-decoration: none;
   color: #fff;
 }
-.weather-card .top .wrapper .temp a .temp-type {
+.card .top .wrapper .temp a .temp-type {
   font-size: 85px;
 }
-.weather-card .top .wrapper .temp .temp-value {
+.card .top .wrapper .temp .temp-value {
   display: inline-block;
   font-size: 85px;
   font-weight: 600;
   color: #fff;
 }
-.weather-card .top .wrapper .temp .deg {
+.card .top .wrapper .temp .deg {
   display: inline-block;
   font-size: 35px;
   font-weight: 600;
@@ -110,7 +106,7 @@ body {
   vertical-align: top;
   margin-top: 10px;
 }
-.weather-card .top::after {
+.card .top::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -120,7 +116,7 @@ body {
   left: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.weather-card .top:hover::after{
+.card .top:hover::after{
   content: "";
   height: 100%;
   width: 100%;
@@ -131,28 +127,28 @@ body {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.weather-card .bottom {
+.card .bottom {
   padding: 0 30px;
   background: #fff;
 }
-.weather-card .bottom .wrapper .forecast {
+.card .bottom .wrapper .forecast {
   overflow: hidden;
   margin: 0;
   font-size: 0;
   padding: 0;
   padding-top: 20px;
 }
-.weather-card .bottom .wrapper .forecast a {
+.card .bottom .wrapper .forecast a {
   text-decoration: none;
   color: #000;
 }
-.weather-card .bottom .wrapper .forecast .go-up {
+.card .bottom .wrapper .forecast .go-up {
   text-align: center;
   display: block;
   font-size: 25px;
   margin-bottom: 10px;
 }
-.weather-card .bottom .wrapper .forecast li {
+.card .bottom .wrapper .forecast li {
   font-family: 'Montserrat', sans-serif;
   display: block;
   font-size: 18px;
@@ -161,23 +157,8 @@ body {
   line-height: 1em;
   margin-bottom: 30px;
 }
-.weather-card .bottom .wrapper .forecast li .date {
-  display: inline-block;
-}
-.weather-card .bottom .wrapper .forecast li .condition {
-  display: inline-block;
-  vertical-align: middle;
-  float: right;
-  font-size: 25px;
-}
-
-.weather-card .bottom .wrapper .forecast li.active {
+.card .bottom .wrapper .forecast li.active {
   color: rgba(0, 0, 0, 0.8);
-}
-.weather-card.rain .top {
-  background: url("http://img.freepik.com/free-vector/girl-with-umbrella_1325-5.jpg?size=338&ext=jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 .card-img{
   height: 400px;
@@ -191,7 +172,6 @@ body {
 
 }
 .accordion-container{
-  margin: auto;
   margin-bottom: 30px;
   width: 100%; height: 300px;
 }
@@ -222,11 +202,6 @@ body{
   border:1px solid #222;
   position: relative;
 }
-
-.img1{ background-image: url("../../assets/thailand.jpg"); }
-.img2{ background-image: url("../../assets/japan.jpg"); }
-.img3{ background-image: url("../../assets/iceland.jpg"); }
-
 .img p{
   position: absolute;
   bottom: 0; left: 0;
@@ -235,10 +210,18 @@ body{
   color: #fff;
   transform: rotate(-90deg);
   transform-origin: 0% 0%;
-  transition: all 0.3s;
+  transition: all 0.5s;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   white-space: nowrap;
+  font-size: 12px;
+}
+
+.img p.price{
+  visibility: hidden;
+  transform: rotate(0deg);
+  left: 0;
+  transition: all 0.5s;
 }
 
 .img-accordion:hover .img{ transform: skew(0); }
@@ -246,9 +229,14 @@ body{
 .img:hover{ flex: 5; }
 
 .img:hover p{
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.9);
   border:2px solid #222;
   color:#222;
+  font-size: 16px;
   transform: rotate(0deg);
+}
+.img:hover p.price{
+  left:83%;
+  visibility: visible;
 }
 
