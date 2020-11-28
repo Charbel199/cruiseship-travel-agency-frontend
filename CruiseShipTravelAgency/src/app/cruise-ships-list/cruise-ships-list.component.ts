@@ -62,7 +62,4 @@ export class CruiseShipsListComponent implements OnInit {
   }
  }
 
- showTravelPlans(){
-    console.log(this.shipTravelPlans);
- }
 }
