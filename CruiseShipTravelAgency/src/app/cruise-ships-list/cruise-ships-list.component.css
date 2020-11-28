@@ -5,35 +5,8 @@
 .demo-title {
   text-align: center;
   color: #808080;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
-.carousel-item {
-  height: 100vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.carousel-caption {
-  bottom: 270px;
 }
 
-.carousel-caption h5 {
-  font-size: 45px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 25px;
-}
-
-.carousel-caption p {
-  width: 75%;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.9;
-}
 body {
   font-family: 'Montserrat', sans-serif;
   background: #112233;
@@ -41,24 +14,47 @@ body {
 
 .weather-card {
   margin: 60px auto;
-  height: 500px;
-  width: 650px;
+  width: 400px;
   background: #fff;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
-.weather-card .top {
+.weather-card:hover{
+
+}
+.weather-card.one .top {
   position: relative;
-  height: 370px;
-  width: 650px;
+  height: 570px;
+  width: 100%;
   overflow: hidden;
-  background: url("../../assets/registerBg.jpg") no-repeat;
+  background: url("../../assets/The Pegasus.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
   text-align: center;
 }
+.weather-card.two .top {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../../assets/The Titanic.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+.weather-card.three .top {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("../../assets/The Grand ACG.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+
 .weather-card .top .wrapper {
-  padding: 15px;
+  padding: 30px;
   position: relative;
   z-index: 1;
 }
@@ -113,7 +109,7 @@ body {
   vertical-align: top;
   margin-top: 10px;
 }
-.weather-card .top:after {
+.weather-card .top::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -123,6 +119,17 @@ body {
   left: 0;
   background: rgba(0, 0, 0, 0.5);
 }
+.weather-card .top:hover::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .weather-card .bottom {
   padding: 0 30px;
   background: #fff;
@@ -133,7 +140,6 @@ body {
   font-size: 0;
   padding: 0;
   padding-top: 20px;
-  max-height: 155px;
 }
 .weather-card .bottom .wrapper .forecast a {
   text-decoration: none;
@@ -146,8 +152,9 @@ body {
   margin-bottom: 10px;
 }
 .weather-card .bottom .wrapper .forecast li {
+  font-family: 'Montserrat', sans-serif;
   display: block;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.25);
   line-height: 1em;
@@ -162,24 +169,7 @@ body {
   float: right;
   font-size: 25px;
 }
-.weather-card .bottom .wrapper .forecast li .condition .temp {
-  display: inline-block;
-  vertical-align: top;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  padding-top: 2px;
-}
-.weather-card .bottom .wrapper .forecast li .condition .temp .deg {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
-  margin-left: 3px;
-  vertical-align: top;
-}
-.weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
-  font-size: 20px;
-}
+
 .weather-card .bottom .wrapper .forecast li.active {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -192,8 +182,17 @@ body {
   height: 400px;
   width: auto;
 }
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+
+}
 .accordion-container{
-  padding: 50px;
+  margin: auto;
+  margin-bottom: 30px;
+  width: 100%; height: 300px;
 }
 
 body{
@@ -204,7 +203,8 @@ body{
 }
 
 .img-accordion{
-  width: 90%; height: 80vh;
+  margin: 30px auto;
+  width: 90%; height: 100%;
   display: flex;
 }
 
@@ -225,8 +225,6 @@ body{
 .img1{ background-image: url("../../assets/thailand.jpg"); }
 .img2{ background-image: url("../../assets/japan.jpg"); }
 .img3{ background-image: url("../../assets/iceland.jpg"); }
-.img4{ background-image: url("../../assets/greece.jpg"); }
-.img5{ background-image: url("../../assets/thailand.jpg"); }
 
 .img p{
   position: absolute;
@@ -247,8 +245,9 @@ body{
 .img:hover{ flex: 5; }
 
 .img:hover p{
-  background-color: transparent;
+  background-color: rgba(255,255,255,0.6);
   border:2px solid #222;
   color:#222;
   transform: rotate(0deg);
 }
+

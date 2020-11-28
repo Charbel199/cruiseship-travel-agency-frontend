@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {CruiseShipApiResponse} from '../models/cruise-ship-api-response';
+import {OneCruiseShipApiResponse} from '../models/one-cruise-ship-api-response';
 import {HttpClient} from '@angular/common/http';
 import {TravelPlanApiResponse} from '../models/travel-plan-api-response';
 import {CrewMemberApiResponse} from '../models/crew-member-api-response';
@@ -24,8 +25,8 @@ export class CruiseShipService {
     });
   }
 
-  getCruiseShip(shipId: number): Observable<CruiseShipApiResponse>{
-    return this.httpClient.get<CruiseShipApiResponse>( this.API_URL + `cruiseships/${shipId}`, {
+  getCruiseShip(shipId: number): Observable<OneCruiseShipApiResponse>{
+    return this.httpClient.get<OneCruiseShipApiResponse>( this.API_URL + `cruiseships/${shipId}`, {
       withCredentials: true
     });
   }
