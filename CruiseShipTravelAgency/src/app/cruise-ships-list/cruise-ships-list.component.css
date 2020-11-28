@@ -6,7 +6,9 @@
   text-align: center;
   color: #808080;
 }
-
+.row-md{
+  padding: 20px;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background: #112233;
@@ -14,7 +16,7 @@ body {
 
 .weather-card {
   margin: 60px auto;
-  width: 400px;
+  width: 650px;
   background: #fff;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -24,17 +26,16 @@ body {
 }
 .weather-card.one .top {
   position: relative;
-  height: 570px;
+  height: 470px;
   width: 100%;
   overflow: hidden;
-  background: url("../../assets/The Pegasus.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
+
+
   text-align: center;
 }
 .weather-card.two .top {
   position: relative;
-  height: 570px;
+  height: 470px;
   width: 100%;
   overflow: hidden;
   background: url("../../assets/The Titanic.jpg") no-repeat;
@@ -44,7 +45,7 @@ body {
 }
 .weather-card.three .top {
   position: relative;
-  height: 570px;
+  height: 470px;
   width: 100%;
   overflow: hidden;
   background: url("../../assets/The Grand ACG.jpg") no-repeat;
