@@ -1,1 +1,38 @@
-<p>travel-plan-details works!</p>
+<body>
+<div class="backbut">
+  <a class="btn-floating btn-tw" routerLink="/cruiseships" type="button" role="button"><i class="fa fa-arrow-left fa-4x"
+                                                                                          style="color:white"></i></a>
+</div>
+<div class="row" *ngIf="travelPlan">
+  <div class="col nopadding">
+    <div class="container nopadding" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'">
+
+    </div>
+  </div>
+  <div class="col">
+    <div class="travelplan">
+      <div class="travelplantitle">
+        <h1>{{travelPlan.travelPlanRegion}}</h1>
+      </div>
+      <div class="travelplaninfo">
+        <p>
+          {{travelPlan.travelPlanDescription}}
+        </p>
+      </div>
+      <div class="travelplanprice">
+        <h2>Price: {{travelPlan.travelPlanPrice}}$</h2>
+      </div>
+    </div>
+
+    <div class="stops">
+
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </div>
+
+  </div>
+</div>
+
+
+</body>

@@ -1,0 +1,59 @@
+
+body{
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+.backbut{
+  position: absolute;
+  top:9px;
+  left:9px;
+  z-index: 1;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.container{
+  clip-path: polygon(0 0, 77% 0, 95% 35%, 76% 100%, 0 100%, 0% 50%);
+  height : 100vh;
+  width: 100vh;
+  overflow: visible;
+  object-fit: cover;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.travelplan{
+  padding: 10px;
+}
+
+
+.travelplantitle{
+  padding-top:20px;
+}
+.travelplantitle h1{
+  font-size: 80px;
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+
+.travelplaninfo p{
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+.travelplanprice h2{
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+agm-map{
+  height: 400px;
+}

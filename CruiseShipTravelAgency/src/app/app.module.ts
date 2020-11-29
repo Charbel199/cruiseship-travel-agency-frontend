@@ -16,7 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { TravelPlanDetailsComponent } from './travel-plan-details/travel-plan-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ShipInfoComponent } from './ship-info/ship-info.component';
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,10 @@ import { ShipInfoComponent } from './ship-info/ship-info.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD5BmffE1kyaCpqDon2teOQDmxtTHU2hQA'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

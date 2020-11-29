@@ -10,14 +10,17 @@ import {Stop} from '../models/stop';
   styleUrls: ['./travel-plan-details.component.css']
 })
 export class TravelPlanDetailsComponent implements OnInit {
-  travelPlan: TravelPlan = undefined;
-  stops: Array<Stop> = [];
+  travelPlan = undefined;
+  stops = [];
+  lat = 51.678418;
+  lng = 7.809007;
   constructor(
     private travelPlanDetailsService: TravelPlanDetailsService,
     private travelPlanService: TravelPlanService
   ) { }
 
   ngOnInit(): void {
+      window.scrollTo(0, 0);
       this.travelPlan = this.travelPlanDetailsService.getCurrentTravelPlan();
       console.log('In details: ', this.travelPlan);
       this.travelPlanService.getTravelPlanStops(this.travelPlan.travelPlanId).subscribe( res => {
