@@ -13,6 +13,8 @@ import { CruiseShipsListComponent } from './cruise-ships-list/cruise-ships-list.
 import { RegisterComponent } from './register/register.component';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { TravelPlanDetailsComponent } from './travel-plan-details/travel-plan-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { LoginComponent } from './login/login.component';
     ProfileComponent,
     CruiseShipsListComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    TravelPlanDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
