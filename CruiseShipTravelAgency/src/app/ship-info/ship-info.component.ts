@@ -10,6 +10,7 @@ export class ShipInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scroll(0,0);
     for(var i=1; i<25; i++){
       this.updateReserved(i);
       this.removeReserved(i);
