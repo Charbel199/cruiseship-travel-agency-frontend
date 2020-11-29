@@ -3,16 +3,24 @@
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 *{ margin: 0; padding: 0; box-sizing: border-box; }
 
+.top-bg{
+  width: 100vw;
+  text-align: center;
+}
 .topBG{
   width: 100%;
+  clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 85%, 0 0);
 }
 h1{
+  width: 100%;
   font-size: 9rem;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
   text-shadow: 3px 3px #343a40;
 }
 h2{
+  margin-top:10px;
+  width: 100%;
   font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
@@ -27,6 +35,7 @@ h2{
 .sub-title{
   position: absolute;
   top: 40%;
+  padding-top: 10px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
