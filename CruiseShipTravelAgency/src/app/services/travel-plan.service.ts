@@ -27,8 +27,8 @@ export class TravelPlanService {
     });
   }
 
-  getTravelPlanStops(travelPlanId: number): Observable<TravelPlanApiResponse> {
-    return this.httpClient.get<TravelPlanApiResponse>( this.API_URL + `travelplans/${travelPlanId}/stops`, {
+  getTravelPlanStops(travelPlanId: number): Observable<StopApiResponse> {
+    return this.httpClient.get<StopApiResponse>( this.API_URL + `travelplans/${travelPlanId}/stops`, {
       withCredentials: true
     });
   }

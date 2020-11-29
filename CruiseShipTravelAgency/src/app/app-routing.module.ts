@@ -7,6 +7,7 @@ import {CruiseShipsListComponent} from './cruise-ships-list/cruise-ships-list.co
 import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {TravelPlanDetailsComponent} from './travel-plan-details/travel-plan-details.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'cruiseships', component: CruiseShipsListComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'travelplan', component: TravelPlanDetailsComponent},
   {path: '**', component: PageNotFoundComponent }
 ];
 

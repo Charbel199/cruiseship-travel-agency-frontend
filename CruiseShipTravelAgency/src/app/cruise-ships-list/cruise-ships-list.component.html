@@ -39,7 +39,7 @@
 
                 <div class="img-accordion">
                   <div class="img" *ngFor="let travelPlan of shipTravelPlans[i*2+j]" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'"
-                  routerLink="/planInfo{{travelPlan.travelPlanId}}">
+                  (click)="pushTravelPlanDetails(travelPlan)"   routerLink="/travelplan">
                     <p class="price">${{travelPlan.travelPlanPrice}}</p>
                     <p>{{travelPlan.travelPlanRegion}}</p>
                   </div>

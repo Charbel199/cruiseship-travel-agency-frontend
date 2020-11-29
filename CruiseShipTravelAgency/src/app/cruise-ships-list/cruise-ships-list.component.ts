@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CruiseShipService} from '../services/cruise-ship.service';
 import {CruiseShip} from '../models/cruise-ship';
+import {TravelPlanDetailsService} from '../services/travel-plan-details.service';
 
 
 @Component({
@@ -16,7 +17,9 @@ export class CruiseShipsListComponent implements OnInit {
   mystring = 'The Pegasus.jpg';
 
 
-  constructor(public cruiseShipService: CruiseShipService,
+  constructor(
+    public cruiseShipService: CruiseShipService,
+    public travelPlanDetailsService: TravelPlanDetailsService
   ) {
 
   }
@@ -25,6 +28,9 @@ export class CruiseShipsListComponent implements OnInit {
   ngOnInit(): void {
     this.getAllShips();
 
+  }
+  pushTravelPlanDetails(travelPlan): void{
+    this.travelPlanDetailsService.assignTravelPlan(travelPlan);
   }
 
  getAllShips(): void{
