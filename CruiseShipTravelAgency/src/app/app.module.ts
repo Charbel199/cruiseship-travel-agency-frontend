@@ -15,6 +15,7 @@ import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { TravelPlanDetailsComponent } from './travel-plan-details/travel-plan-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ShipInfoComponent } from './ship-info/ship-info.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RegisterComponent,
     LoginComponent,
     TravelPlanDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ShipInfoComponent
   ],
   imports: [
     BrowserModule,

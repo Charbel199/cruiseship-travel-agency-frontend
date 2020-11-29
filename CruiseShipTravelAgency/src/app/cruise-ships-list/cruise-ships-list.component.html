@@ -5,6 +5,7 @@
   <h2 class="sub-title">A world awaits, we'll help you find it.</h2>
 </div>
 
+
 <div class="container-fluid" *ngIf="shipsPairs">
 
   <div class="row" *ngFor="let shipPair of shipsPairs; let i = index">
@@ -17,7 +18,7 @@
              [style.background]="'url(' + ship.shipPictureURL + ') no-repeat center center '"
              [style.background-size]="'cover'">
           <div class="wrapper">
-            <a class="ship-info" routerLink="/shipInfo{{ship.shipId}}"><img src="../../assets/Info.svg" style="width: 20px; height: 20px"></a>
+            <a class="ship-info" routerLink="/shipInfo/{{ship.shipId}}"><img src="../../assets/Info.svg" style="width: 20px; height: 20px"></a>
             <h1 class="heading">{{ship.shipName}}</h1>
           </div>
         </div>

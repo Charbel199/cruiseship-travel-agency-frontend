@@ -8,6 +8,7 @@ import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {TravelPlanDetailsComponent} from './travel-plan-details/travel-plan-details.component';
+import {ShipInfoComponent} from "./ship-info/ship-info.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'travelplan', component: TravelPlanDetailsComponent},
+  {path: 'shipInfo/:id', component: ShipInfoComponent},
   {path: '**', component: PageNotFoundComponent }
 ];
 

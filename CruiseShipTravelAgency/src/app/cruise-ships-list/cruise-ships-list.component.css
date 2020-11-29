@@ -11,6 +11,11 @@
   width: 100%;
   clip-path: polygon(100% 0, 100% 90%, 69% 100%, 0 85%, 0 0);
 }
+
+.top-bg svg g#DECK_ELEMENTS rect[id^="R"].reserved{
+  fill: #ff0000 !important;
+}
+
 h1{
   width: 100%;
   font-size: 9rem;

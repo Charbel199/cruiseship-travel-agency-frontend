@@ -1,0 +1,11 @@
+.top-bg svg g#DECK_ELEMENTS rect[id^="R"].reserved{
+  fill: #ff0000 !important;
+}
+.top-bg{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100vw;
+  text-align: center;
+}
