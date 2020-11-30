@@ -30,24 +30,8 @@ export class CruiseShipsListComponent implements OnInit {
   ngOnInit(): void {
     window.scrollTo(0,0);
     this.getAllShips();
-    for(var i=1; i<25; i++){
-      this.updateReserved(i);
-      this.removeReserved(i);
-
-    }
-    document.getElementById("R" + 4).classList.remove("reserved");
-
   }
 
-  updateReserved(id): void{
-    var room = document.getElementById("R" + id);
-    room.classList.add("reserved");
-  }
-
-  removeReserved(id): void{
-    var room = document.getElementById("R" + id);
-    room.classList.remove("reserved");
-  }
   pushTravelPlanDetails(travelPlan): void{
     this.travelPlanDetailsService.assignTravelPlan(travelPlan);
   }
