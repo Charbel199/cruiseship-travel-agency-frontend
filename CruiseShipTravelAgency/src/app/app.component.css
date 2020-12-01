@@ -1,6 +1,13 @@
 .main{
+  position: relative;
   padding-top: 44px;
   width: 100vw;
   padding-bottom: 1px;
+  z-index: 0;
 
+}
+
+.footer{
+  position: relative;
+  z-index: 1000;
 }

@@ -12,14 +12,18 @@ body{
   left:9px;
   z-index: 1;
 }
-
+.content{
+  margin-left: 40%;
+}
 .nopadding {
-  padding: 0 !important;
-  margin: 0 !important;
+  padding-bottom: 100px;
   clip-path: polygon(0 0, 77% 0, 95% 35%, 76% 100%, 0 100%, 0% 50%);
   height : 100vh;
   overflow: visible;
   object-fit: cover;
+  position: fixed;
+  left:0;
+  z-index: 0;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -34,16 +38,17 @@ body{
 
 
 .travelplantitle{
-  padding-top:20px;
+  padding-top:15px;
 }
 .travelplantitle h1{
-  font-size: 80px;
+  font-size: 6vh;
   font-family: 'Montserrat';
   text-align: center;
 }
 
 
 .travelplaninfo p{
+  font-size:2vh;
   display: flex;
   justify-content: center;
   font-family: 'Montserrat';
@@ -51,16 +56,111 @@ body{
 }
 
 .travelplanprice h2{
+  font-size: 3vh;
   font-family: 'Montserrat';
   text-align: center;
 }
 
 agm-map{
-  height: 300px;
-  width: 600px;
+  height: 36vh;
+  width: 39vw;
   margin: auto;
 }
 .googlemaps{
   display: flex;
   justify-content: center;
+  margin-bottom: 80px;
+
+}
+
+.card-header{
+  text-align: center;
+}
+.card {
+  margin: 60px auto;
+  width: 229px;
+
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.card .top:hover{
+  cursor : pointer;
+
+}
+.card .top {
+  position: relative;
+  height:240px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card .top .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.card .top .wrapper .ship-info {
+  top: 0;
+  display: inline-block;
+  float: right;
+}
+.card .top .wrapper .heading {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fff;
+}
+.card .top .wrapper .location {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+}
+.card .top .wrapper .temp {
+  margin-top: 20px;
+}
+.card .top .wrapper .temp a {
+  text-decoration: none;
+  color: #fff;
+}
+.card .top .wrapper .temp a .temp-type {
+  font-size: 85px;
+}
+.card .top .wrapper .temp .temp-value {
+  display: inline-block;
+  font-size: 85px;
+  font-weight: 600;
+  color: #fff;
+}
+.card .top .wrapper .temp .deg {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.card .top::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.card .top:hover::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
 }

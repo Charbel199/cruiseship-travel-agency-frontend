@@ -1,5 +1,6 @@
 .page-footer{
   width: 100vw;
+  z-index: 900;
 }
 p{
   color: white;

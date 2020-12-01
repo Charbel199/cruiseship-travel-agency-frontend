@@ -1,14 +1,14 @@
 <body>
 <div class="backbut">
-  <a class="btn-floating btn-tw" routerLink="/cruiseships" type="button" role="button"><i class="fa fa-angle-left fa-4x" style="color:white"></i></a>
+  <a class="btn-floating btn-tw" routerLink="/cruiseships" type="button" role="button"><i class="fa fa-angle-left fa-4x"
+                                                                                          style="color:white"></i></a>
 </div>
 <div class="row" *ngIf="travelPlan">
   <div class="col-md-4 nopadding" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'">
 
 
-
   </div>
-  <div class="col-md-8">
+  <div class="col-md-6 content">
     <div class="travelplan">
       <div class="travelplantitle">
         <h1>{{travelPlan.travelPlanRegion}}</h1>
@@ -23,7 +23,31 @@
       </div>
     </div>
 
-    <div class="stops">
+    <div class="stops" *ngIf="stops">
+      <div class="travelplantitle" style="margin-top: 50px">
+        <h1>Cruise Stops</h1>
+      </div>
+      <div class="row">
+        <div class="col" *ngFor="let stop of stops">
+          <div class="card one">
+            <div class="card-header">
+              <h2>{{stop.stopDuration}} days</h2>
+            </div>
+
+            <div class="top "
+                 [style.background]="'url('+stop.stopPictureURL+'.jpg'+') no-repeat center center '"
+                 [style.background-size]="'cover'">
+              <div class="wrapper">
+
+                <h1 class="heading">{{stop.stopDestination}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
       <div class="travelplanprice">
         <h2>Google Maps</h2>
       </div>
