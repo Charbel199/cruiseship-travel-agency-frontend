@@ -3,8 +3,7 @@ i{
   text-shadow: 0 0 3px #000;
 }
 body{
-  height: 100%;
-  margin: 0;
+
   position: relative;
 }
 .backbut{
@@ -13,11 +12,10 @@ body{
   left:9px;
   z-index: 1;
 }
+
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
-}
-.container{
   clip-path: polygon(0 0, 77% 0, 95% 35%, 76% 100%, 0 100%, 0% 50%);
   height : 100vh;
   overflow: visible;
@@ -28,6 +26,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 .travelplan{
   padding: 10px;
@@ -57,5 +56,11 @@ body{
 }
 
 agm-map{
-  height: 400px;
+  height: 300px;
+  width: 600px;
+  margin: auto;
+}
+.googlemaps{
+  display: flex;
+  justify-content: center;
 }

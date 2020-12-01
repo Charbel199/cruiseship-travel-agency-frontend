@@ -3,12 +3,12 @@
   <a class="btn-floating btn-tw" routerLink="/cruiseships" type="button" role="button"><i class="fa fa-angle-left fa-4x" style="color:white"></i></a>
 </div>
 <div class="row" *ngIf="travelPlan">
-  <div class="col nopadding">
-    <div class="container nopadding" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'">
+  <div class="col-md-4 nopadding" [style.background-image]="'url(' + travelPlan.travelPlanPictureURL + ')'">
 
-    </div>
+
+
   </div>
-  <div class="col">
+  <div class="col-md-8">
     <div class="travelplan">
       <div class="travelplantitle">
         <h1>{{travelPlan.travelPlanRegion}}</h1>
@@ -24,10 +24,14 @@
     </div>
 
     <div class="stops">
-
+      <div class="travelplanprice">
+        <h2>Google Maps</h2>
+      </div>
+      <div class="googlemaps">
         <agm-map [latitude]="lat" [longitude]="lng">
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
         </agm-map>
+      </div>
     </div>
 
   </div>
