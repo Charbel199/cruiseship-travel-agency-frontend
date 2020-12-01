@@ -11,14 +11,19 @@ export class HomeComponent implements OnInit {
 
   customerEmail: string;
   customerPassword: string;
-
+  reviews: Array<string> = ['One of the best websites out there',
+    'I had one of the most fun experience in my life',
+    'ACG Cruises are the best cruises out there'];
+  review: string = this.reviews[0];
   constructor(
     private router: Router,
     public customerService: CustomerService
   ) { }
 
   ngOnInit(): void {
+
   }
+
 
   login(): void {
     console.log(this.customerEmail);
