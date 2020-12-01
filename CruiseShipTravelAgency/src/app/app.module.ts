@@ -17,6 +17,8 @@ import { TravelPlanDetailsComponent } from './travel-plan-details/travel-plan-de
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ShipInfoComponent } from './ship-info/ship-info.component';
 import { AgmCoreModule } from '@agm/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { AgmCoreModule } from '@agm/core';
     CommonModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD5BmffE1kyaCpqDon2teOQDmxtTHU2hQA'
-    })
+    }),
+    NoopAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

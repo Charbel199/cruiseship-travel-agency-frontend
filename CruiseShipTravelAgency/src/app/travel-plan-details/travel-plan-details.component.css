@@ -20,7 +20,6 @@ body{
 .container{
   clip-path: polygon(0 0, 77% 0, 95% 35%, 76% 100%, 0 100%, 0% 50%);
   height : 100vh;
-  width: 100vh;
   overflow: visible;
   object-fit: cover;
 
