@@ -20,23 +20,23 @@
           <h4 class="subHeading">Sail away from the safe harbour. Catch the trade winds in your sails. Explore, dream, discover.
           </h4>
         </div>
-        <div class="maincomponents">
+        <div class="maincomponents" *ngIf="!this.customerService.IS_LOGGED_IN">
 
           <div class="md-form mb-5">
             <div class="form-group">
-              <input type="text" class="form-input"  placeholder="Email Address"/>
+              <input type="text" class="form-input" [(ngModel)]="customerEmail"  placeholder="Email Address"/>
             </div>
 
           </div>
 
           <div class="md-form mb-5">
             <div class="form-group">
-              <input type="password" class="form-input"  placeholder="Password"/>
+              <input type="password" class="form-input"  [(ngModel)]="customerPassword" placeholder="Password"/>
             </div>
           </div>
           <div class="md-form mb-5">
           <div class="form-group">
-            <input type="submit"  class="form-submit" value="Log In"/>
+            <input type="submit"  class="form-submit" (click)="login()" value="Log In"/>
           </div>
           </div>
           <h4 class="subHeading" >Don't have an account yet? <a [routerLink]="['/register']" >Register</a>
@@ -46,7 +46,22 @@
           <h2 class="heading1">
             Start you journey
           </h2>
-            <button mat-raised-button routerLink="/cruiseships">Book your cruise</button>
+            <button mat-raised-button routerLink="/cruiseships">Book Now</button>
+
+
+          </div>
+        </div>
+        <div class="maincomponents" *ngIf="this.customerService.IS_LOGGED_IN">
+
+          <div class="loggedInText">
+          <h2 class="heading1">
+            Welcome back {{this.customerService.loggedInCustomer.customerFirstName}}!
+          </h2>
+            <h2 class="heading1" class="subHeading loggedInText">
+              Continue you journey
+            </h2>
+          </div>
+            <button mat-raised-button routerLink="/cruiseships">Book Now</button>
 
 
           </div>
@@ -60,7 +75,3 @@
 
 
   </div>
-<div class="mainfooter">
-
-</div>
-</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CustomerService} from "../services/customer.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  customerEmail: string;
+  customerPassword: string;
+
+  constructor(
+    private router: Router,
+    public customerService: CustomerService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  login(): void {
+    console.log(this.customerEmail);
+    this.customerService.login(this.customerEmail, this.customerPassword).subscribe( res => {
+        console.log('Logged in');
+        this.router.navigate(['/profile']);
+      }, error => {
+        console.log('Error');
+      },
+      () => {
+        console.log('Completed login');
+        this.customerService.updateLoginStatus();
+      });
   }
 
 }

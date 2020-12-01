@@ -55,12 +55,20 @@
   font-size: 3rem;
   text-transform: uppercase;
 }
+.maincontent .heading1{
+  text-shadow: 0 0 3px #000;
+}
 
 .subHeading{
   font-family: "Montserrat";
   font-size: 1rem;
   letter-spacing: .125rem;
   text-transform: uppercase;
+  text-shadow: 0 0 1px #000;
+}
+
+.maincontent .subHeading{
+  text-shadow: 0 0 1px #000;
 }
 
 p{
@@ -202,6 +210,10 @@ input:focus, select:focus, textarea:focus {
   border: none;
   background-color: black }
 
+.loggedInText{
+  padding-top: 200px;
+
+}
 button{
   color: white;
   background-color: black;
