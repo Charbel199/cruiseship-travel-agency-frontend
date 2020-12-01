@@ -54,8 +54,18 @@
         <h2>Google Maps</h2>
       </div>
       <div class="googlemaps">
-        <agm-map [latitude]="lat" [longitude]="lng">
-          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="2">
+          <agm-polyline [strokeColor]="'red'" [visible]="true" [strokeWeight]="3" [pattern]="">
+            <agm-polyline-point *ngFor="let stop of stops;let i = index"   [latitude]="googleCoordinatesLat[i]" [longitude]="googleCoordinatesLong[i]">
+            </agm-polyline-point>
+
+          </agm-polyline>
+          <agm-marker *ngFor="let stop of stops;let i = index"  [latitude]="googleCoordinatesLat[i]" [longitude]="googleCoordinatesLong[i]">
+            <agm-info-window>
+              <strong>{{stop.stopRank}}</strong>
+            </agm-info-window>
+          </agm-marker>
+
         </agm-map>
       </div>
     </div>

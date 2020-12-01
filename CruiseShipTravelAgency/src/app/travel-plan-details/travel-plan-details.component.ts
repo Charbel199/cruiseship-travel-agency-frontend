@@ -13,9 +13,11 @@ import {ActivatedRoute, Route} from '@angular/router';
 export class TravelPlanDetailsComponent implements OnInit {
   travelPlan = undefined;
   stops = [];
+  googleCoordinatesLat = [];
+  googleCoordinatesLong = [];
   travelPlanDuration = 0;
-  lat = 51.678418;
-  lng = 7.809007;
+  lat: number;
+  lng: number;
   constructor(
     private travelPlanService: TravelPlanService,
     private route: ActivatedRoute
@@ -29,9 +31,17 @@ export class TravelPlanDetailsComponent implements OnInit {
         console.log('Travel plan ', this.travelPlan);
         this.travelPlanService.getTravelPlanStops(this.travelPlan.travelPlanId).subscribe( res2 => {
             this.stops = res2.data.stops;
+            this.lat = Number(this.stops[0].stopGoogleURL.split(',')[0]);
+            this.lng =  Number(this.stops[0].stopGoogleURL.split(',')[1]);
+            let googleCoordinate = [];
             for (const stop of this.stops ){
               this.travelPlanDuration += stop.stopDuration;
+              googleCoordinate = stop.stopGoogleURL.split(',');
+              this.googleCoordinatesLat.push( Number(googleCoordinate[0]));
+              this.googleCoordinatesLong.push( Number(googleCoordinate[1]));
             }
+            console.log('lat', this.lat);
+            console.log('lng', this.lng);
             console.log(this.stops);
           }, error => {},
           () => {});

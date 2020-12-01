@@ -42,7 +42,7 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     CommonModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD5BmffE1kyaCpqDon2teOQDmxtTHU2hQA'
+      apiKey: 'AIzaSyChMM60kXKRMDDbKEt2hIBMfN2MC9QTy2Q'
     }),
     NoopAnimationsModule,
     MatButtonModule
