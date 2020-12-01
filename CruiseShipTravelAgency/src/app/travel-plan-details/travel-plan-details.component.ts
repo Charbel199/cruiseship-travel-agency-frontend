@@ -12,6 +12,7 @@ import {Stop} from '../models/stop';
 export class TravelPlanDetailsComponent implements OnInit {
   travelPlan = undefined;
   stops = [];
+  travelPlanDuration = 0;
   lat = 51.678418;
   lng = 7.809007;
   constructor(
@@ -25,6 +26,9 @@ export class TravelPlanDetailsComponent implements OnInit {
       console.log('In details: ', this.travelPlan);
       this.travelPlanService.getTravelPlanStops(this.travelPlan.travelPlanId).subscribe( res => {
         this.stops = res.data.stops;
+        for( let stop of this.stops ){
+          this.travelPlanDuration += stop.stopDuration;
+        }
         console.log(this.stops);
       }, error => {},
         () => {});

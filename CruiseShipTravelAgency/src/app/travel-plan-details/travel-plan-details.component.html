@@ -21,6 +21,9 @@
       <div class="travelplanprice">
         <h2>Price: {{travelPlan.travelPlanPrice}}$</h2>
       </div>
+      <div class="travelplanduration">
+        <h2>Duration: {{travelPlanDuration}} days</h2>
+      </div>
     </div>
 
     <div class="stops" *ngIf="stops">
@@ -30,9 +33,6 @@
       <div class="row">
         <div class="col" *ngFor="let stop of stops">
           <div class="card one">
-            <div class="card-header">
-              <h2>{{stop.stopDuration}} days</h2>
-            </div>
 
             <div class="top "
                  [style.background]="'url('+stop.stopPictureURL+'.jpg'+') no-repeat center center '"
@@ -40,6 +40,8 @@
               <div class="wrapper">
 
                 <h1 class="heading">{{stop.stopDestination}}</h1>
+                <h2 class="heading duration" *ngIf="stop.stopDuration!=1">{{stop.stopDuration}} days</h2>
+                <h2 class="heading duration" *ngIf="stop.stopDuration==1">{{stop.stopDuration}} day</h2>
               </div>
             </div>
           </div>
