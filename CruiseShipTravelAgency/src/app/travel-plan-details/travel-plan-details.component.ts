@@ -3,6 +3,7 @@ import {TravelPlanDetailsService} from '../services/travel-plan-details.service'
 import {TravelPlan} from '../models/travel-plan';
 import {TravelPlanService} from '../services/travel-plan.service';
 import {Stop} from '../models/stop';
+import {ActivatedRoute, Route} from '@angular/router';
 
 @Component({
   selector: 'app-travel-plan-details',
@@ -16,22 +17,25 @@ export class TravelPlanDetailsComponent implements OnInit {
   lat = 51.678418;
   lng = 7.809007;
   constructor(
-    private travelPlanDetailsService: TravelPlanDetailsService,
-    private travelPlanService: TravelPlanService
+    private travelPlanService: TravelPlanService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
       window.scrollTo(0, 0);
-      this.travelPlan = this.travelPlanDetailsService.getCurrentTravelPlan();
-      console.log('In details: ', this.travelPlan);
-      this.travelPlanService.getTravelPlanStops(this.travelPlan.travelPlanId).subscribe( res => {
-        this.stops = res.data.stops;
-        for( let stop of this.stops ){
-          this.travelPlanDuration += stop.stopDuration;
-        }
-        console.log(this.stops);
-      }, error => {},
-        () => {});
+      console.log(Number(this.route.snapshot.paramMap.get('id')));
+      this.travelPlan = this.travelPlanService.getTravelPlan( Number(this.route.snapshot.paramMap.get('id'))).subscribe(res =>{
+        this.travelPlan = res.data.travelplans;
+        console.log('Travel plan ', this.travelPlan);
+        this.travelPlanService.getTravelPlanStops(this.travelPlan.travelPlanId).subscribe( res2 => {
+            this.stops = res2.data.stops;
+            for (const stop of this.stops ){
+              this.travelPlanDuration += stop.stopDuration;
+            }
+            console.log(this.stops);
+          }, error => {},
+          () => {});
+      });
   }
 
 

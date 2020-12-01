@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'cruiseships', component: CruiseShipsListComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'travelplan', component: TravelPlanDetailsComponent},
+  {path: 'travelplan/:id', component: TravelPlanDetailsComponent},
   {path: 'shipInfo/:id', component: ShipInfoComponent},
   {path: '**', component: PageNotFoundComponent }
 ];
