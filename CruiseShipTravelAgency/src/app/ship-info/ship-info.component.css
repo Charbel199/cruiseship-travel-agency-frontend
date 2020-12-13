@@ -1,16 +1,26 @@
-.top-bg svg g#DECK_ELEMENTS rect[id^="R"].reserved{
+svg g#DECK_ELEMENTS rect[id^="R"].reserved{
   fill: #ff0000 !important;
 }
-.top-bg{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100vw;
-  text-align: center;
-}
-svg{
 
+.carousel-indicators .active{
+  background-color: #343a40
+}
+.carousel #carousel-deckPlan{
+  width: calc(100% - 490px);
+}
+.carousel-indicators{
+  bottom: calc(100% - 60px);
+  right: calc(-50% + 45px);
+  left: unset;
+}
+.info-panel{
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+  width: 490px;
+}
+.carousel-indicators li{
+  text-indent: 0;
+  text-align: center;
 }
 .backbut{
   position: absolute;
@@ -21,7 +31,15 @@ svg{
 i{
   text-shadow: 0 0 3px #000;
 }
-
+.carousel-img {
+  display: block;
+  margin: auto;
+}
+.carousel svg{
+  display: block;
+  margin-left: 100px;
+  margin-right: 100px;
+}
 body{
   height: 100%;
   margin: 0;

@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 44px;
   width: 100vw;
-  padding-bottom: 1px;
+  min-height: calc(100% - 224px);
   z-index: 0;
 
 }

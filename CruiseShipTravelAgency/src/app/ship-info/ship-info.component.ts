@@ -25,12 +25,15 @@ export class ShipInfoComponent implements OnInit {
     this.shipId = Number(this.route.snapshot.paramMap.get('id'))
     this.cruiseShipService.getCruiseShip(this.shipId).subscribe(res =>{
       this.NbFloors = res.data.cruiseship.shipNumberOfFloors
-      for(var i =0; i<this.NbFloors-2; i++)
-      this.Floors[i] = "../../assets/ship" + this.shipId + "DeckPlan" + "deckFloor" + (i+2);
+      for(var i =0; i<this.NbFloors-1; i++)
+      this.Floors[i] = "../../assets/ship" + this.shipId + "DeckPlan/deckFloor" + (i+2) + ".svg";
     });
     this.cruiseShipService.getCruiseShipTravelPlanRooms(this.shipId, 1, '2020-11-30').subscribe(res => {
       this.rooms = res.data.rooms;
-      console.log(res);
+      this.rooms.sort(function(a,b){
+        return a.roomId -b.roomId
+      });
+      console.log(this.rooms);
       this.rooms[0].roomStatus = "reserved";
       this.updateReserved(this.rooms[0].roomId);
       /*for (var i = 0; i < this.rooms.length; i++) {
