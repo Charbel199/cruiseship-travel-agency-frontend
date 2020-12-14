@@ -19,6 +19,7 @@ import { ShipInfoComponent } from './ship-info/ship-info.component';
 import { AgmCoreModule } from '@agm/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatButtonModule} from '@angular/material/button';
     LoginComponent,
     TravelPlanDetailsComponent,
     PageNotFoundComponent,
-    ShipInfoComponent
+    ShipInfoComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

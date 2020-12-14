@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/']);
     }, error => {
       console.log('Error');
+      console.log(error);
       },
       () => {
       console.log('Completed login');

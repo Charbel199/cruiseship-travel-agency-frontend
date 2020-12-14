@@ -4,6 +4,7 @@ import {TravelPlan} from '../models/travel-plan';
 import {TravelPlanService} from '../services/travel-plan.service';
 import {Stop} from '../models/stop';
 import {ActivatedRoute, Route} from '@angular/router';
+import {CustomerService} from "../services/customer.service";
 
 @Component({
   selector: 'app-travel-plan-details',
@@ -20,7 +21,8 @@ export class TravelPlanDetailsComponent implements OnInit {
   lng: number;
   constructor(
     private travelPlanService: TravelPlanService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private customerService: CustomerService
   ) { }
 
   ngOnInit(): void {
