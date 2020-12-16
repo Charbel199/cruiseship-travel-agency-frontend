@@ -21,12 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c138b0b1-1dc2-4da3-ade5-2bd9150152f7" name="Default Changelist" comment="Finishing login component logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/travel-plan-details/travel-plan-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/travel-plan-details/travel-plan-details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/travel-plan-details/travel-plan-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/travel-plan-details/travel-plan-details.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/cruise-ship.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/cruise-ship.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/reservation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/reservation.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/travel-plan.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/travel-plan.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,8 @@
       <workItem from="1607007031494" duration="398000" />
       <workItem from="1607816060710" duration="273000" />
       <workItem from="1607820908933" duration="282000" />
-      <workItem from="1607938237738" duration="5995000" />
+      <workItem from="1607938237738" duration="6089000" />
+      <workItem from="1608131450701" duration="1065000" />
     </task>
     <task id="LOCAL-00001" summary="minor change">
       <created>1606433026405</created>
@@ -222,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606866061908</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Rating component">
+      <created>1607944278267</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1607944278267</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +266,8 @@
     <MESSAGE value="Fixed trave plan info routing" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="Tried google maps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried google maps" />
+    <MESSAGE value="Rating component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rating component" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606433096346">
@@ -295,10 +302,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="354" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607938748073" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1606866064899">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1607944283379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606866064899" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607944283379" />
     <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607938274427">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

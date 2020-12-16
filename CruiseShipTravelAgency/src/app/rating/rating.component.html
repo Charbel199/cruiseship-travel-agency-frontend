@@ -1,0 +1,62 @@
+<!-- Modal -->
+<div class="modal fade" id="elegantModalForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+
+
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>RATING</strong></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mx-4">
+        <!--Body-->
+        <div class="md-form mb-2">
+          <div class="form-group">
+
+
+                <div class="col-md-12">
+                  <div class="stars">
+                    <form action="">
+                      <input (click)="setRating(5)" class="star star-5" id="star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label>
+                      <input (click)="setRating(4)" class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label>
+                      <input (click)="setRating(3)" class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label>
+                      <input (click)="setRating(2)" class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label>
+                      <input (click)="setRating(1)" class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label>
+                    </form>
+                  </div>
+                </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="md-form pb-3">
+          <div class="form-group">
+            <h3>Review</h3>
+            <textarea class="form-control" [(ngModel)]="review" aria-label="With textarea"></textarea>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <input type="submit" (click)="submit()" class="form-submit" value="Submit" data-dismiss="modal"/>
+        </div>
+
+      </div>
+      <!--Footer-->
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Modal -->
+
+
+

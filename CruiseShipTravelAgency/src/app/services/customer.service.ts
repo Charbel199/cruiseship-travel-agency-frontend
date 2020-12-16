@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {CustomerApiResponse} from '../models/customer-api-response';
 import {Customer} from '../models/customer';
 import {take} from 'rxjs/operators';
+import {ApiService} from "./api.service";
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +16,10 @@ export class CustomerService {
   loggedInCustomer: Customer;
   API_URL = 'http://localhost:8080/';
   constructor(
-    private httpClient: HttpClient
-  ) {
-
-  }
+    private httpClient: HttpClient,
+    private apiService: ApiService
+) {this.API_URL = apiService.API_URL;
+}
     checkIfLoggedIn(): Observable<CustomerApiResponse>{
     console.log('Sending ping')
       return this.httpClient.get<CustomerApiResponse>(this.API_URL + 'login', {

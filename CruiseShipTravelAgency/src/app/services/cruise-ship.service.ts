@@ -8,15 +8,19 @@ import {CrewMemberApiResponse} from '../models/crew-member-api-response';
 import {RoomApiResponse} from '../models/room-api-response';
 import {CruiseShipRatingApiResponse} from '../models/cruise-ship-rating-api-response';
 import {CruiseShipRating} from '../models/cruise-ship-rating';
+import {ApiService} from "./api.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CruiseShipService {
+
   API_URL = 'http://localhost:8080/';
   constructor(
-    private httpClient: HttpClient
-  ) { }
+    private httpClient: HttpClient,
+    private apiService: ApiService
+  ) {this.API_URL = apiService.API_URL;
+  }
 
 
   getAllCruiseShips(): Observable<CruiseShipApiResponse> {

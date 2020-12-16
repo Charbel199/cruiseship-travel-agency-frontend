@@ -5,6 +5,7 @@ import {TravelPlanApiResponse} from '../models/travel-plan-api-response';
 import {StopApiResponse} from '../models/stop-api-response';
 import {TravelPlanRatingApiResponse} from '../models/travel-plan-rating-api-response';
 import {TravelPlanRating} from '../models/travel-plan-rating';
+import {ApiService} from "./api.service";
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,10 @@ import {TravelPlanRating} from '../models/travel-plan-rating';
 export class TravelPlanService {
   API_URL = 'http://localhost:8080/';
   constructor(
-    private httpClient: HttpClient
-  ) { }
+    private httpClient: HttpClient,
+    private apiService: ApiService
+) {this.API_URL = apiService.API_URL;
+}
 
   getTravelPlan(travelPlanId: number): Observable<TravelPlanApiResponse> {
     return this.httpClient.get<TravelPlanApiResponse>(this.API_URL + `travelplans/${travelPlanId}` , {
