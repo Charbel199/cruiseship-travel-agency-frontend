@@ -10,6 +10,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {TravelPlanDetailsComponent} from './travel-plan-details/travel-plan-details.component';
 import {ShipInfoComponent} from "./ship-info/ship-info.component";
 import {ReservationComponent} from "./reservation/reservation.component";
+import {AdminDashboardComponent} from "./admin-dashboard/admin-dashboard.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'travelplan/:id', component: TravelPlanDetailsComponent},
   {path: 'shipInfo/:id', component: ShipInfoComponent},
   {path: 'book', component: ReservationComponent},
+  {path: 'admin', component: AdminDashboardComponent},
   {path: '**', component: PageNotFoundComponent }
 ];
 

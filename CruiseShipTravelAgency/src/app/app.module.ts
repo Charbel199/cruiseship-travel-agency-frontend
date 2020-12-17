@@ -21,6 +21,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { RatingComponent } from './rating/rating.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ReservationComponent } from './reservation/reservation.component';
     PageNotFoundComponent,
     ShipInfoComponent,
     RatingComponent,
-    ReservationComponent
+    ReservationComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

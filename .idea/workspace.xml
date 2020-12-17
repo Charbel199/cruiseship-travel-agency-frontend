@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c138b0b1-1dc2-4da3-ade5-2bd9150152f7" name="Default Changelist" comment="Finishing login component logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/cruise-ship.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/cruise-ship.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/customer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/reservation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/reservation.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/travel-plan.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/travel-plan.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,9 @@
       <workItem from="1607816060710" duration="273000" />
       <workItem from="1607820908933" duration="282000" />
       <workItem from="1607938237738" duration="6089000" />
-      <workItem from="1608131450701" duration="1065000" />
+      <workItem from="1608131450701" duration="5064000" />
+      <workItem from="1608140464044" duration="672000" />
+      <workItem from="1608204927852" duration="12058000" />
     </task>
     <task id="LOCAL-00001" summary="minor change">
       <created>1606433026405</created>
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607944278267</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added api service and rating">
+      <created>1608133339423</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608133339423</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +274,8 @@
     <MESSAGE value="minor changes" />
     <MESSAGE value="Tried google maps" />
     <MESSAGE value="Rating component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rating component" />
+    <MESSAGE value="added api service and rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="added api service and rating" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606433096346">
@@ -298,18 +306,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606430127168" />
-    <state x="354" y="65" key="RollbackChangesDialog" timestamp="1607938748073">
+    <state x="354" y="65" key="RollbackChangesDialog" timestamp="1608228964634">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="354" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607938748073" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1607944283379">
+    <state x="354" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608228964634" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1608133346173">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607944283379" />
-    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607938274427">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608133346173" />
+    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608228992792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1607938274427" />
+    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1608228992792" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1606433454185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
