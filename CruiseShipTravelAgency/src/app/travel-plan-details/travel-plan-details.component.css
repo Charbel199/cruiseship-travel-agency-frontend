@@ -176,3 +176,16 @@ agm-map{
 .card .top:hover .duration{
   visibility: visible;
 }
+div.stars, div.stars div {
+  display: inline-block;
+  background: url(../../assets/star.png) 0 0 repeat-x;
+  width: 250px;
+  height: 38px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+div.stars div {
+  display: block;
+  background-position: 0 -38px !important;
+}

@@ -54,7 +54,6 @@ export class RatingComponent implements OnInit {
     console.log(type);
     console.log(id);
     this.review = '';
-    window.location.reload();
 
   }
   getPosition(text, subString, i): number {

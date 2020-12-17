@@ -6,6 +6,7 @@ import {Stop} from '../models/stop';
 import {Router, ActivatedRoute, Route} from '@angular/router';
 import {CustomerService} from "../services/customer.service";
 import {CruiseShipService} from "../services/cruise-ship.service";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-travel-plan-details',
@@ -26,6 +27,7 @@ export class TravelPlanDetailsComponent implements OnInit {
   lng: number;
   shipId: number;
   departureDate;
+  date;
 
   constructor(
     private travelPlanService: TravelPlanService,
@@ -37,6 +39,7 @@ export class TravelPlanDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.date = new DatePipe('en-US');
     window.scrollTo(0, 0);
     this.planId = Number(this.route.snapshot.paramMap.get('id'));
     this.route.queryParams.subscribe(params => {
@@ -55,7 +58,7 @@ export class TravelPlanDetailsComponent implements OnInit {
         this.travelPlanRating = this.travelPlanRating / this.ratings.length;
         console.log("Rating after division: " + this.travelPlanRating);
         this.travelPlanRating *= 10;
-        this.travelPlanRating = Math.round(this.travelPlanRating / 5) * 5;
+        this.travelPlanRating = Math.round(this.travelPlanRating);
         this.travelPlanRating /= 10
         this.defined = !Number.isNaN(this.travelPlanRating)
 
