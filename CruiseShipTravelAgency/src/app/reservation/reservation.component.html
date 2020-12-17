@@ -1,0 +1,27 @@
+<div class="backbut">
+  <a class="btn-floating btn-tw" (click)="back()" type="button" role="button"><i class="fa fa-angle-left fa-4x"
+                                                                                          style="color:white"></i></a>
+</div>
+
+<div class="main-header">
+  <span class="main-title">
+    Booking on {{shipName}} to travel to {{travelPlanName}} on {{departureDate| date:'mediumDate'}}<br>
+    Choose your room:
+  </span>
+</div>
+
+<div class="product-container" xmlns="http://www.w3.org/1999/html">
+  <div class="product" *ngFor="let type of roomTypes; let i = index">
+    <div class="sides">
+      <div class="front"><img [src]="type.roomPicture + '.jpg'"></div>
+      <div class="back">
+
+        <p><span class="class-title">{{type.roomClass}} </span><br>
+          {{type.roomDescription}}<br>
+          Pricing: ${{type.roomPrice}}<br>
+          Capacity: {{type.roomCapacity}} people</p>
+      </div>
+    </div>
+    <h1>{{type.roomClass}}</h1>
+  </div>
+</div>

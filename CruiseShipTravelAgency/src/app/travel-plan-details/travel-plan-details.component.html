@@ -24,7 +24,7 @@
       <div class="travelplanduration">
         <h2>Duration: {{travelPlanDuration}} days</h2>
       </div>
-      <div class="travelplanduration">
+      <div class="travelplanduration" *ngIf="defined">
         <h2>Rating: {{travelPlanRating}}</h2>
       </div>
     </div>
@@ -72,7 +72,8 @@
         </agm-map>
       </div>
     </div>
-    <button *ngIf="this.customerService.IS_LOGGED_IN"mat-raised-button data-toggle="modal" data-target="#elegantModalForm2">Rate</button>
+    <button *ngIf="this.customerService.IS_LOGGED_IN" mat-raised-button data-toggle="modal" data-target="#elegantModalForm2">Rate</button>
+    <button (click)="navigate()" routerLink="/book">book now</button>
 
   </div>
 </div>

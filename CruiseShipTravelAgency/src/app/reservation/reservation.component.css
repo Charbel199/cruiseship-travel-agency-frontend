@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i{
+  text-shadow: 0 0 3px #000;
+}
+.backbut{
+  position: fixed;
+  top:45px;
+  left:9px;
+  z-index: 1;
+}
+.main-header{
+  height: 15vh;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-shadow: 3px 3px #343a40;
+  background-image: -moz-linear-gradient(to right, #343a40, #6c757d);
+  background-image: -ms-linear-gradient(to right, #343a40, #6c757d);
+  background-image: -o-linear-gradient(to right, #343a40, #6c757d);
+  background-image: -webkit-linear-gradient(to right, #343a40, #6c757d);
+  background-image: linear-gradient(to right, #343a40, #6c757d);
+  clip-path: polygon(100% 100%, 70% 78%, 0 100%, 0 0, 100% 0);
+}
+.main-title{
+  padding-top: 4vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: slateblue;
+}
+
+.product-container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.product {
+  width: 250px;
+  height: 250px;
+}
+
+.sides {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  transition: all 0.65s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.front {
+  overflow: hidden;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back {
+  background-color: #fff;
+  transform: rotateX(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat,sans-serif;
+  text-align: center;
+}
+
+.back::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid #222;
+  border-radius: 10px;
+  transform: translateZ(100px);
+}
+.backbut{
+  position: fixed;
+  top:45px;
+  left:9px;
+  z-index: 1;
+}
+.back p {
+  transform: translateZ(100px);
+  color: #222;
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 0 25px;
+  visibility: hidden;
+}
+.class-title{
+  font-size: 22px;
+}
+h1{
+  padding-top: 5px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 22px;
+}
+.product:hover h1:after{
+  content: "-Book Now!";
+}
+.product:hover p{
+  visibility: visible;
+}
+.product:hover .sides {
+  transform: rotateX(180deg);
+  height: 200%
+}

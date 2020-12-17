@@ -9,6 +9,7 @@ import {LoginComponent} from './login/login.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {TravelPlanDetailsComponent} from './travel-plan-details/travel-plan-details.component';
 import {ShipInfoComponent} from "./ship-info/ship-info.component";
+import {ReservationComponent} from "./reservation/reservation.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'travelplan/:id', component: TravelPlanDetailsComponent},
   {path: 'shipInfo/:id', component: ShipInfoComponent},
+  {path: 'book', component: ReservationComponent},
   {path: '**', component: PageNotFoundComponent }
 ];
 

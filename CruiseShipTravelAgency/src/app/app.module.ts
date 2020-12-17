@@ -20,6 +20,7 @@ import { AgmCoreModule } from '@agm/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { RatingComponent } from './rating/rating.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RatingComponent } from './rating/rating.component';
     TravelPlanDetailsComponent,
     PageNotFoundComponent,
     ShipInfoComponent,
-    RatingComponent
+    RatingComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
