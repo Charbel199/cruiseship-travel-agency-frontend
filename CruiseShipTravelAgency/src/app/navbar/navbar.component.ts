@@ -126,7 +126,7 @@ export class NavbarComponent implements OnInit {
       error => {},
       () => {
       this.customerService.updateLoginStatus();
-
+      this.customerService.IS_ADMIN = false;
       });
   }
 

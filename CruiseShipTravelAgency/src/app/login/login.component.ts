@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {CustomerService} from '../services/customer.service';
+import {AdminService} from "../services/admin.service";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
   customerPassword: string;
   constructor(
     private router: Router,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private adminService: AdminService
   ) { }
 
   ngOnInit(
@@ -35,5 +37,16 @@ export class LoginComponent implements OnInit {
 
   goToRegister(): void{
     this.router.navigate(['/register']);
+  }
+
+  loginAsAdmin(): void {
+    this.adminService.loginAsAdmin(this.customerEmail,this.customerPassword).subscribe(res =>{
+      console.log('Logged in');
+      this.router.navigate(['/admin']);
+    },error => {},
+      ()=>{
+      this.customerService.IS_LOGGED_IN = true;
+      this.customerService.IS_ADMIN = true;
+      })
   }
 }

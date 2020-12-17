@@ -14,15 +14,16 @@ export class CustomerService {
 
   IS_LOGGED_IN = false;
   loggedInCustomer: Customer;
+  IS_ADMIN = false;
   API_URL = 'http://localhost:8080/';
   constructor(
     private httpClient: HttpClient,
     private apiService: ApiService
 ) {this.API_URL = apiService.API_URL;
 }
-    checkIfLoggedIn(): Observable<CustomerApiResponse>{
+    checkIfLoggedIn(): Observable<any>{
     console.log('Sending ping')
-      return this.httpClient.get<CustomerApiResponse>(this.API_URL + 'login', {
+      return this.httpClient.get<any>(this.API_URL + 'login', {
         withCredentials: true,
       });
     }
@@ -32,8 +33,12 @@ export class CustomerService {
         .subscribe(res => {
         console.log(' I AM LOGGED IN ');
         console.log(res);
+        if(res.data.adminId){
+          this.IS_ADMIN = true;
+          this.IS_LOGGED_IN = true;
+        }else{
         this.IS_LOGGED_IN = true;
-        this.loggedInCustomer = res.data.customer;
+        this.loggedInCustomer = res.data.customer;}
       },
         error => {
           console.log(' I AM NOT LOGGED IN ');
