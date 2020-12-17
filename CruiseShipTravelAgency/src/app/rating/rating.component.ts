@@ -22,6 +22,7 @@ export class RatingComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.review = '';
 
   }
 
@@ -52,6 +53,7 @@ export class RatingComponent implements OnInit {
     }
     console.log(type);
     console.log(id);
+    this.review = '';
 
   }
   getPosition(text, subString, i): number {
@@ -59,5 +61,9 @@ export class RatingComponent implements OnInit {
   }
   setRating(rating: number): void{
   this.rating = rating;
+  }
+
+  close(){
+    this.review= '';
   }
 }

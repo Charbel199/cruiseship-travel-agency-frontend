@@ -2,18 +2,58 @@ svg g#DECK_ELEMENTS rect[id^="R"].reserved{
   fill: #ff0000 !important;
 }
 
-.carousel-indicators .active{
-  background-color: #343a40
+.carousel-indicators li.active{
+  background-color: #343a40;
+}
+
+.deckPlan{
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.main-header{
+  height: 15vh;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-shadow: 3px 3px #343a40;
+  background-image: -moz-linear-gradient(to right, #343a40, #6c757d);
+  background-image: -ms-linear-gradient(to right, #343a40, #6c757d);
+  background-image: -o-linear-gradient(to right, #343a40, #6c757d);
+  background-image: -webkit-linear-gradient(to right, #343a40, #6c757d);
+  background-image: linear-gradient(to right, #343a40, #6c757d);
+  clip-path: polygon(100% 100%, 70% 78%, 0 100%, 0 0, 100% 0);
+}
+
+.main-title{
+  padding-top: 4vh;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.row{
+  height:100vh;
 }
 .carousel #carousel-deckPlan{
   width: calc(100% - 490px);
 }
+
+.carousel-indicators li{
+  background-color: #777777;
+}
 .carousel-indicators{
-  bottom: calc(100% - 60px);
-  right: calc(-50% + 45px);
-  left: unset;
+
+  position : relative;
+  justify-content: unset;
+  margin-right: 0;
+  margin-left: 0;
 }
 .info-panel{
+  border-left: solid;
+  border-width: 1px;
+  border-color: #777777;
   font-family: 'Montserrat', sans-serif;
   font-size: large;
   width: 490px;
@@ -21,6 +61,14 @@ svg g#DECK_ELEMENTS rect[id^="R"].reserved{
 .carousel-indicators li{
   text-indent: 0;
   text-align: center;
+}
+
+.technical-sheet{
+  font-size: 16px;
+  list-style: none;
+}
+.technical-sheet li{
+  padding-top: 5px;
 }
 .backbut{
   position: absolute;

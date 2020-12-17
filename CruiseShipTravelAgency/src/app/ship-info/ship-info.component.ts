@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CruiseShipService} from "../services/cruise-ship.service";
 import {Room} from "../models/room";
 import {RoomApiResponse} from "../models/room-api-response";
@@ -10,28 +10,35 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./ship-info.component.css']
 })
 export class ShipInfoComponent implements OnInit {
-  rooms = [] ;
-  Floors =[];
+  rooms = [];
+  Floors = [];
   NbFloors;
+  ship;
   shipId;
+  active = [];
 
   constructor(
     private route: ActivatedRoute,
-    private cruiseShipService : CruiseShipService
-  ) { }
+    private cruiseShipService: CruiseShipService
+  ) {
+  }
 
   ngOnInit(): void {
     window.scroll(0, 0);
     this.shipId = Number(this.route.snapshot.paramMap.get('id'))
-    this.cruiseShipService.getCruiseShip(this.shipId).subscribe(res =>{
+    this.cruiseShipService.getCruiseShip(this.shipId).subscribe(res => {
+      this.ship = res.data.cruiseship;
       this.NbFloors = res.data.cruiseship.shipNumberOfFloors
-      for(var i =0; i<this.NbFloors-1; i++)
-      this.Floors[i] = "../../assets/ship" + this.shipId + "DeckPlan/deckFloor" + (i+2) + ".svg";
+      this.active[0] = true;
+      for (var i = 1; i < this.NbFloors; i++)
+        this.active[i] = false;
+      for (var i = 0; i < this.NbFloors - 1; i++)
+        this.Floors[i] = "../../assets/ship" + this.shipId + "DeckPlan/deckFloor" + (i + 2) + ".svg";
     });
     this.cruiseShipService.getCruiseShipTravelPlanRooms(this.shipId, 1, '2020-11-30').subscribe(res => {
       this.rooms = res.data.rooms;
-      this.rooms.sort(function(a,b){
-        return a.roomId -b.roomId
+      this.rooms.sort(function (a, b) {
+        return a.roomId - b.roomId
       });
       console.log(this.rooms);
       this.rooms[0].roomStatus = "reserved";
@@ -50,14 +57,22 @@ export class ShipInfoComponent implements OnInit {
 
   }
 
-  updateReserved(id): void{
+  updateReserved(id): void {
     var room = document.getElementById("R" + id);
     room.classList.add("reserved");
   }
 
-  removeReserved(id): void{
+  removeReserved(id): void {
     var room = document.getElementById("R" + id);
     room.classList.remove("reserved");
+  }
+
+  click(i): void {
+    for(var j = 0; j< this.active.length; j++){
+      this.active[j] = false;
+    }
+    this.active[i] = true;
+
   }
 
 }

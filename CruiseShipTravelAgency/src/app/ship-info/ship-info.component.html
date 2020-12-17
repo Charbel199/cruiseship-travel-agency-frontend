@@ -5,9 +5,14 @@
                                                                                           style="color:white"></i></a>
 </div>
 
+<div class="main-header">
+  <h1 class="main-title">
+    {{ship.shipName}}
+  </h1>
+</div>
 
-<div class="row">
-  <div class="col">
+<div class="row" height = 100vh>
+  <div class="col deckPlan">
     <div id="carousel-deckPlan" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner">
       <div class="carousel-item active" *ngIf="shipId == 1">
@@ -3783,21 +3788,42 @@
       </div>
 
     </div>
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-deckPlan" data-slide-to="0" class="active">
-          1
-        </li>
-        <li data-target="#carousel-deckPlan" *ngFor="let floor of Floors; let i = index" [attr.data-slide-to] = "i + 1">
-          {{i+2}}
-        </li>
-      </ol>
+
     </div>
   </div>
 
-  <div class="col">
-  <div class="info-panel">
+  <div class="col info-panel">
+
     Viewing floor:
+    <div id="caorusel-deckPlan" >
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-deckPlan" data-slide-to="0" (click)="click(0)" [ngClass]="active[0]? 'active' : ' ' ">
+        1
+      </li>
+      <li data-target="#carousel-deckPlan" *ngFor="let floor of Floors; let i = index" [attr.data-slide-to] = "i + 1"
+          (click)="click(i+2)" [ngClass]="active[i+2]? 'active' : ' ' ">
+        {{i+2}}
+      </li>
+    </ol>
+    </div>
+    <img src="../../assets/deckPlanLegend.svg" width = "150px" style="display: block" >
   </div>
+
+  <div class="col info-panel">
+
+    Ship Technical Information:
+    <ol class="technical-sheet">
+      <li>Number of Floors: {{ship.shipNumberOfFloors}} floors</li>
+      <li>Number of Rooms: {{ship.shipNumberOfRooms}} rooms</li>
+      <li>Tonnage: {{ship.shipTonnage}} tons</li>
+      <li>Speed: {{ship.shipSpeed}} knots</li>
+      <li>Volume: {{ship.shipVolume}} m<sup>3</sup></li>
+      <li>Crew Capacity: {{ship.shipCrewCapacity}} crewmates</li>
+
+    </ol>
+
+
+
   </div>
 </div>
 </body>

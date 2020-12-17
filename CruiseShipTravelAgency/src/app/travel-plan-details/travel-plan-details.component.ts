@@ -13,6 +13,8 @@ import {CustomerService} from "../services/customer.service";
 })
 export class TravelPlanDetailsComponent implements OnInit {
   travelPlan = undefined;
+  ratings = [];
+  travelPlanRating = 0;
   stops = [];
   googleCoordinatesLat = [];
   googleCoordinatesLong = [];
@@ -30,6 +32,14 @@ export class TravelPlanDetailsComponent implements OnInit {
       console.log(Number(this.route.snapshot.paramMap.get('id')));
       this.travelPlan = this.travelPlanService.getTravelPlan( Number(this.route.snapshot.paramMap.get('id'))).subscribe(res =>{
         this.travelPlan = res.data.travelplans;
+        this.travelPlanService.getTravelPlanRating(this.travelPlan.travelPlanId).subscribe( res3 => {
+          this.ratings = res3.data.ratings;
+          for(var i = 0; i< this.ratings.length; i++){
+            this.travelPlanRating += this.ratings[i].travelPlanRating;
+            console.log(this.ratings[i]);
+          }
+          this.travelPlanRating /= this.ratings.length;
+        })
         console.log('Travel plan ', this.travelPlan);
         this.travelPlanService.getTravelPlanStops(this.travelPlan.travelPlanId).subscribe( res2 => {
             this.stops = res2.data.stops;
