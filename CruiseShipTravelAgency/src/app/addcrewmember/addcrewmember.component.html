@@ -1,0 +1,60 @@
+<div class="backbut">
+  <a class="btn-floating btn-tw" routerLink="/admin" type="button" role="button"><i class="fa fa-angle-left fa-4x"
+                                                                                    style="color:black"></i></a>
+</div>
+<div class="mainheader">
+
+  <h2 class="heading1">
+    Admin Dashboard
+  </h2>
+
+</div>
+<hr style="width:60%">
+
+
+<div class="container">
+  <div class="signup-content">
+
+    <h2 class="form-title">Add Crew Member</h2>
+
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="crewMember.crewMemberFirstName" placeholder="First Name"/>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="crewMember.crewMemberLastName" placeholder="Last Name"/>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="crewMember.crewMemberDateOfBirth" placeholder="Year Of Birth"/>
+    </div>
+    <div class="form-group">
+      <select class="custom-select" [(ngModel)]="crewMember.crewMemberGender" required>
+        <option value = "" selected disabled hidden>Gender</option>
+        <option [ngValue]="'M'">Male</option>
+        <option [ngValue]="'F'">Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="crewMember.crewMemberAddress" placeholder="Address"/>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="crewMember.crewMemberTelephoneNumber" placeholder="Telephone Number"/>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="crewMember.crewMemberPosition" placeholder="Position"/>
+    </div>
+
+
+
+
+
+
+    <div class="form-group">
+      <input type="submit" (click)="addCrewMember()" class="form-submit" value="Add"/>
+    </div>
+
+  </div>
+</div>
+

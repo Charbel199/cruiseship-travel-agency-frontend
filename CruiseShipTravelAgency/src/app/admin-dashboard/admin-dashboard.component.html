@@ -1,13 +1,71 @@
+<div class="mainheader">
+
+  <h2 class="heading1">
+   Admin Dashboard
+  </h2>
+
+</div>
+<hr style="width:60%">
+<div class="mainbody">
+  <div class="row" *ngIf="cruiseShips">
+    <div class="col">
+      <div class="card one">
+
+        <div class="top "
+             [style.background]="'url(../../assets/iceland.jpg) no-repeat center center '"
+             [style.background-size]="'cover'">
+          <div class="wrapper">
+
+            <h1 class="heading">Travel Plan</h1>
+            <h2 class="heading duration" routerLink="/addtravelplan"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    <div class="card one">
+
+      <div class="top "
+           [style.background]="'url(../../assets/Stops/stopCanada.jpg) no-repeat center center '"
+           [style.background-size]="'cover'">
+        <div class="wrapper">
+
+          <h1 class="heading">Stops</h1>
+          <h2 class="heading duration" routerLink="/addstop"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></h2>
+
+        </div>
+      </div>
+    </div>
+    </div>
+      <div class="col">
+    <div class="card one">
+
+      <div class="top "
+           [style.background]="'url(../../assets/crewMembers.jpg) no-repeat center center '"
+           [style.background-size]="'cover'">
+        <div class="wrapper">
+
+          <h1 class="heading">Crew Members</h1>
+          <h2 class="heading duration" routerLink="/addcrewmember"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></h2>
+
+        </div>
+      </div>
+    </div>
+      </div>
+  </div>
+  <hr class="notallline">
+
+
+</div>
 
 
 
 
-<input
-  type="file"
-  [(ngModel)]="currentInput"
-  (change)="onFileSelected($event)"
->
-
-<p>{{currentInput}}</p>
-
-
+<div class="row justify-content-center" *ngIf="cruiseShips">
+  <div class="col-4">
+    <div class="row" *ngFor="let ship of cruiseShips">
+      {{ship.shipName}}
+    </div>
+  </div>
+</div>

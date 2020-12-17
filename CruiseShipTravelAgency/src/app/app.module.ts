@@ -22,6 +22,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { RatingComponent } from './rating/rating.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
+import { AddtravelplanComponent } from './addtravelplan/addtravelplan.component';
+import { AddstopComponent } from './addstop/addstop.component';
+import { AddcrewmemberComponent } from './addcrewmember/addcrewmember.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.compone
     ShipInfoComponent,
     RatingComponent,
     ReservationComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    AddtravelplanComponent,
+    AddstopComponent,
+    AddcrewmemberComponent
   ],
   imports: [
     BrowserModule,
