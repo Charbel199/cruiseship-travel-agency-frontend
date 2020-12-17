@@ -1,0 +1,48 @@
+<div class="backbut">
+  <a class="btn-floating btn-tw" routerLink="/admin" type="button" role="button"><i class="fa fa-angle-left fa-4x"
+                                                                                    style="color:black"></i></a>
+</div>
+<div class="mainheader">
+
+  <h2 class="heading1">
+    Admin Dashboard
+  </h2>
+
+</div>
+<hr style="width:60%">
+
+
+<div class="container">
+  <div class="signup-content">
+
+    <h2 class="form-title">Add Stop</h2>
+
+
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="stop.stopDestination" placeholder="Destination"/>
+    </div>
+
+
+
+    <div class="form-group">
+      <input type="text" class="form-input" [(ngModel)]="stop.stopGoogleURL" placeholder="Google URL"/>
+    </div>
+    <div class="form-group">
+      <input
+        type="file"
+        [(ngModel)]="stop.stopPictureURL"
+      >
+
+    </div>
+
+
+
+
+
+    <div class="form-group">
+      <input type="submit" (click)="addStop()" class="form-submit" value="Add"/>
+    </div>
+
+  </div>
+</div>
+

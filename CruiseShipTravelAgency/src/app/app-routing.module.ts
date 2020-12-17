@@ -11,6 +11,9 @@ import {TravelPlanDetailsComponent} from './travel-plan-details/travel-plan-deta
 import {ShipInfoComponent} from "./ship-info/ship-info.component";
 import {ReservationComponent} from "./reservation/reservation.component";
 import {AdminDashboardComponent} from "./admin-dashboard/admin-dashboard.component";
+import {AddtravelplanComponent} from "./addtravelplan/addtravelplan.component";
+import {AddcrewmemberComponent} from "./addcrewmember/addcrewmember.component";
+import {AddstopComponent} from "./addstop/addstop.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,6 +26,9 @@ const routes: Routes = [
   {path: 'shipInfo/:id', component: ShipInfoComponent},
   {path: 'book', component: ReservationComponent},
   {path: 'admin', component: AdminDashboardComponent},
+  {path: 'addtravelplan', component: AddtravelplanComponent},
+  {path: 'addstop', component: AddstopComponent},
+  {path: 'addcrewmember', component: AddcrewmemberComponent},
   {path: '**', component: PageNotFoundComponent }
 ];
 
