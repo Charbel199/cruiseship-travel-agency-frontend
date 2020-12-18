@@ -1,0 +1,222 @@
+body {
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.centercol{
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: white;
+}
+h1 {
+  font-size: 34px;
+  margin: 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 11px;
+  margin: 0;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 11px;
+  font-weight: 600;
+  margin: 25px 0 25px 0;
+}
+
+h6 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 300px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.first {
+  margin-top: 70px;
+  height: 300px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.second {
+  margin-top: 0px;
+  height: 120px;
+  border-top: 1px solid white;
+
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.top {
+  top: -10px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: white;
+}
+.bottom {
+  bottom: -10px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: white;
+}
+.left {
+  left: -10px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: white;
+}
+.right {
+  right: -10px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.spacer {
+  padding: 25px 20px 20px 20px;
+}
+
+.spacer2 {
+  padding: 15px 20px 20px 20px;
+}
+
+.spacer > img {
+  width: 57px;
+  float: left;
+  padding-right: 30px;
+}
+
+.name-flight {
+  float: left;
+}
+
+.name-flight > h3 {
+  text-transform: uppercase;
+  color: black;
+}
+
+.name-flight > h4 {
+  color: #7c7c7c;
+  margin-top: -5px;
+}
+
+h4 > span {
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+}
+
+.destination {
+  margin-top: 70px;
+}
+
+.from {
+  float: left;
+  width: 33%;
+  color: #5d6474;
+}
+
+.center {
+  float: left;
+  width: 33%
+
+}
+
+i {
+  color: #5d6474;
+  padding-top: 15px;
+  padding-left: 25%;
+}
+
+.to {
+  float: left;
+  width: 33%;
+  color: #5d6474;
+}
+
+.from > span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.to > span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.left-side {
+  float: left;
+  width: 37%;
+}
+
+h5 > span {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+}
+
+
+.right-side {
+  float: right;
+  width: 33%;
+}
+
+h5 {
+  color: #5e6675;
+}
+.mainheader{
+  background-color: white;
+  height: 7%;
+  text-align: center;
+  margin: 40px;
+}
+.heading1{
+  font-family: "Montserrat";
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.spacer2 > h3 {
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.flight-gate {
+  float: left;
+  width: 66%;
+  margin-top: 15px;
+}
+
+.flight-gate > h5 {
+  margin: 0 0 5px 0;
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.text-barcode > img {
+  float: left;
+  width: 33%;
+  margin-top: 5px;
+}

@@ -1,1 +1,76 @@
-<p>profile works!</p>
+
+
+
+<body>
+<div class="mainheader">
+  <div class="name">
+  <h1>{{this.customerService.loggedInCustomer.customerFirstName}}<h3>{{this.customerService.loggedInCustomer.customerLastName}}</h3></h1>
+  </div>
+  <hr style="width:60%">
+  <h2 class="heading1">
+    Reservations
+  </h2>
+
+</div>
+
+
+  <div class="row justify-content-center" *ngIf="reservations">
+
+    <div class="col-md-4 ml-0 centercol" *ngFor="let reservation of reservations; let i = index">
+      <div class="container first">
+        <div class="top left corner"></div>
+        <div class="top right corner"></div>
+        <div class="bottom left corner"></div>
+        <div class="bottom right corner"></div>
+        <div class="spacer">
+          <div class="name-flight">
+            <h3>{{this.customerService.loggedInCustomer.customerFirstName}} {{this.customerService.loggedInCustomer.customerLastName}}</h3>
+            <h4>Ticker Id <span>{{reservation.ticketCustomerId}}</span></h4>
+          </div>
+          <div class="destination">
+            <div class="from">
+              <h1>{{this.travelPlans[i].travelPlanRegion}}</h1>
+
+            </div>
+            <div class="center">
+                 <span></span>
+            </div>
+            <div class="to">
+              <h1>.</h1>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="left-side">
+              <h5>Date:<br><span>{{substringDate(reservation.departureDate.toString())}}</span></h5>
+              <h5>Price<br><span>{{reservation.reservationPrice}}$</span></h5>
+            </div>
+            <div class="right-side">
+              <h5>Room Id:<br><span>{{reservation.reservationRoomId}}</span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container second"
+           [style.background]="'url(' + travelPlans[i].travelPlanPictureURL + ') no-repeat center center '"
+           [style.background-size]="'cover'">
+        <div class="top left"></div>
+        <div class="top right"></div>
+        <div class="bottom left"></div>
+        <div class="bottom right"></div>
+        <div class="spacer2">
+          <h3>{{this.customerService.loggedInCustomer.customerFirstName}} {{this.customerService.loggedInCustomer.customerLastName}}</h3>
+          <div class="text-barcode">
+            <div class="flight-gate">
+              <h5><span>{{this.travelPlans[i].travelPlanRegion}}</span></h5>
+              <h5>Ticket Id: <span>{{reservation.ticketCustomerId}}</span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
