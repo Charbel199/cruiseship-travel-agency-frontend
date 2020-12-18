@@ -9,7 +9,7 @@ body {
   background-color: white;
 }
 h1 {
-  font-size: 34px;
+  font-size: 26px;
   margin: 0;
   font-weight: 600;
 }
@@ -136,7 +136,7 @@ h4 > span {
 
 .from {
   float: left;
-  width: 33%;
+  width: 100%;
   color: #5d6474;
 }
 
@@ -185,7 +185,7 @@ h5.bottom-ticket > span{
 
 .right-side {
   float: right;
-  width: 33%;
+  width: 50%;
 }
 
 h5 {
@@ -226,3 +226,4 @@ h5 {
   width: 33%;
   margin-top: 5px;
 }
+

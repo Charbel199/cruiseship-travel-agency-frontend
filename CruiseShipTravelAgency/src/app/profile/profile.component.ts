@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   travelPlans = [];
   date = new DatePipe('en-US');
   constructor(
-    private customerService: CustomerService,
+    public customerService: CustomerService,
     private reservationService: ReservationService,
     private travelPlanService: TravelPlanService
   ) { }
