@@ -118,7 +118,9 @@ export class ReservationConfirmationComponent implements AfterViewInit {
             reservationPrice: this.travelPlanPrice + room.roomPrice,
             departureDate: this.departureDate.slice(0,10)
           };
-          this.reservationService.createReservation(this.reservation);
+          this.reservationService.createReservation(this.reservation).subscribe(res => {
+            console.log(res);
+          });
           console.log(this.reservation);
           this.updateReserved(room.roomId);
           break;
