@@ -7,6 +7,7 @@ import {ReservationApiResponse} from "../models/reservation-api-response";
 import {TravelPlan} from "../models/travel-plan";
 import {Stop} from "../models/stop";
 import {CrewMember} from "../models/crew-member";
+import {CustomerService} from "./customer.service";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,12 @@ export class AdminService {
     private apiService: ApiService
   ) {this.API_URL = apiService.API_URL;
   }
-
+  loginAsAdmin(email,password):Observable<any>{
+    console.log("Launching login as admin")
+    return this.httpClient.post<any>(this.API_URL + 'admin/login', {email,password},{
+      withCredentials: true
+    })
+  };
 
   addTravelPlan(travelPlan: TravelPlan): Observable<any>{
     return this.httpClient.post<any>( this.API_URL + 'admin/travelPlan', travelPlan,{

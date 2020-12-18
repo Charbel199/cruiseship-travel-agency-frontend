@@ -21,11 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c138b0b1-1dc2-4da3-ade5-2bd9150152f7" name="Default Changelist" comment="Finishing login component logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/admin-dashboard/admin-dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/admin-dashboard/admin-dashboard.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/admin-dashboard/admin-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/admin-dashboard/admin-dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/admin-dashboard/admin-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/admin-dashboard/admin-dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/addstop/addstop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/addstop/addstop.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/admin.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/services/customer.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
       <workItem from="1607938237738" duration="6089000" />
       <workItem from="1608131450701" duration="5064000" />
       <workItem from="1608140464044" duration="672000" />
-      <workItem from="1608204927852" duration="21456000" />
+      <workItem from="1608204927852" duration="26194000" />
     </task>
     <task id="LOCAL-00001" summary="minor change">
       <created>1606433026405</created>
@@ -250,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608229047679</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Admin Dashboard">
+      <created>1608238659148</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608238659148</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,10 +335,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="354" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608228964634" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1608229051113">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1608238663421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608229051113" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608238663421" />
     <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608230718129">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

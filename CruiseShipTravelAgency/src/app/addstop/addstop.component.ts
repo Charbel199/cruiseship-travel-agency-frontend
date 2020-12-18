@@ -26,7 +26,7 @@ export class AddstopComponent implements OnInit {
 
   addStop(){
   this.adminService.addStop(this.stop).subscribe( res => {
-    this.stop.stopPictureURL = ('../../assets/' + this.stop.stopPictureURL).replace('C:\\fakepath\\','');
+    this.stop.stopPictureURL = ('../../assets/Stops/' + this.stop.stopPictureURL).replace('C:\\fakepath\\','');
     console.log(res);
     this.stop= {
       stopGoogleURL: '',
