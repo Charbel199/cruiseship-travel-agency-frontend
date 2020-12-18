@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c138b0b1-1dc2-4da3-ade5-2bd9150152f7" name="Default Changelist" comment="Finishing login component logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1607938237738" duration="6089000" />
       <workItem from="1608131450701" duration="5064000" />
       <workItem from="1608140464044" duration="672000" />
-      <workItem from="1608204927852" duration="39803000" />
+      <workItem from="1608204927852" duration="41536000" />
     </task>
     <task id="LOCAL-00001" summary="minor change">
       <created>1606433026405</created>
@@ -296,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608255996808</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Hosting">
+      <created>1608257571424</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1608257571424</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +321,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trying to fix login problem" />
     <MESSAGE value="added debugging logs" />
     <MESSAGE value="building cruise ship list page" />
     <MESSAGE value="Trying cruise ship list header" />
@@ -340,7 +345,8 @@
     <MESSAGE value="About" />
     <MESSAGE value="Travel Plan details" />
     <MESSAGE value="ticket adjustments" />
-    <option name="LAST_COMMIT_MESSAGE" value="ticket adjustments" />
+    <MESSAGE value="Hosting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hosting" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606433096346">
@@ -371,18 +377,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606430127168" />
-    <state x="354" y="65" key="RollbackChangesDialog" timestamp="1608228964634">
+    <state x="354" y="65" key="RollbackChangesDialog" timestamp="1608258157850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="354" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608228964634" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1608256000818">
+    <state x="354" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608258157850" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1608257576572">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608256000818" />
-    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608255058187">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608257576572" />
+    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608257422665">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1608255058187" />
+    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1608257422665" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1606433454185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
