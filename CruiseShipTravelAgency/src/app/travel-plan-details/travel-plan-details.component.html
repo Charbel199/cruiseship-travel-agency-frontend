@@ -59,14 +59,18 @@
         </div>
 
       </div>
-
+    <div class="row justify-content-center" style="padding-bottom: 30px">
+      <div class="form-group">
+        <input type="submit" (click)="navigate()"  class="form-submit" value="Book Now"/>
+      </div>
+    </div>
 
       <div class="travelplanprice">
         <h2>Google Maps</h2>
       </div>
       <div class="googlemaps">
         <agm-map [latitude]="lat" [longitude]="lng" [zoom]="2">
-          <agm-polyline [strokeColor]="'red'" [visible]="true" [strokeWeight]="3" [pattern]="">
+          <agm-polyline [strokeColor]="'red'" [visible]="true" [strokeWeight]="3">
             <agm-polyline-point *ngFor="let stop of stops;let i = index"   [latitude]="googleCoordinatesLat[i]" [longitude]="googleCoordinatesLong[i]">
             </agm-polyline-point>
 
@@ -81,7 +85,7 @@
       </div>
     </div>
     <button *ngIf="this.customerService.IS_LOGGED_IN" mat-raised-button data-toggle="modal" data-target="#elegantModalForm2">Rate</button>
-    <button (click)="navigate()" routerLink="/book">book now</button>
+
 
   </div>
 </div>
