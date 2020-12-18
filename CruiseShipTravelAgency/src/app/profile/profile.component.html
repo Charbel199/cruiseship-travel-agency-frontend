@@ -25,9 +25,11 @@
         <div class="spacer">
           <div class="name-flight">
             <h3>{{this.customerService.loggedInCustomer.customerFirstName}} {{this.customerService.loggedInCustomer.customerLastName}}</h3>
-            <h4>Ticker Id <span>{{reservation.ticketCustomerId}}</span></h4>
+            <h4>Ticker Id <span>{{reservation.ticketId}}</span></h4>
           </div>
+
           <div class="destination">
+            <hr style="width: 60%">
             <div class="from">
               <h1>{{this.travelPlans[i].travelPlanRegion}}</h1>
 
@@ -63,10 +65,16 @@
           <div class="text-barcode">
             <div class="flight-gate">
               <h5 class="bottom-ticket"><span>{{this.travelPlans[i].travelPlanRegion}}</span></h5>
-              <h5 class="bottom-ticket">Ticket Id: <span>{{reservation.ticketCustomerId}}</span></h5>
+              <h5 class="bottom-ticket">Ticket Id: <span>{{reservation.ticketId}}</span></h5>
             </div>
           </div>
         </div>
+      </div>
+      <div class="form-group">
+        <input type="submit"  class="form-submit" value="Rate Ship"/>
+      </div>
+      <div class="form-group">
+        <input type="submit"   class="form-submit" value="Rate Travel Plan"/>
       </div>
     </div>
 
