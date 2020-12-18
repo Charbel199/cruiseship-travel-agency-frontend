@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c138b0b1-1dc2-4da3-ade5-2bd9150152f7" name="Default Changelist" comment="Finishing login component logic">
-      <change afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/assets/paper.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/profile/profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/profile/profile.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/src/app/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CruiseShipTravelAgency/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/CruiseShipTravelAgency/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1607938237738" duration="6089000" />
       <workItem from="1608131450701" duration="5064000" />
       <workItem from="1608140464044" duration="672000" />
-      <workItem from="1608204927852" duration="38473000" />
+      <workItem from="1608204927852" duration="39803000" />
     </task>
     <task id="LOCAL-00001" summary="minor change">
       <created>1606433026405</created>
@@ -290,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608255026137</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ticket adjustments">
+      <created>1608255996808</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1608255996808</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +315,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finishing login component logic" />
     <MESSAGE value="trying to fix login problem" />
     <MESSAGE value="added debugging logs" />
     <MESSAGE value="building cruise ship list page" />
@@ -334,7 +339,8 @@
     <MESSAGE value="fixed reservation BRAVO GEORGE" />
     <MESSAGE value="About" />
     <MESSAGE value="Travel Plan details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Travel Plan details" />
+    <MESSAGE value="ticket adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="ticket adjustments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606433096346">
@@ -369,10 +375,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="354" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608228964634" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1608255031526">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1608256000818">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608255031526" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608256000818" />
     <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608255058187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
