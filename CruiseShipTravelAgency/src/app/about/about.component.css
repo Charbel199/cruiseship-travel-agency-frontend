@@ -1,25 +1,33 @@
-.mainheader{
+.mainheader {
   background-color: white;
   height: 7%;
   text-align: center;
   margin: 40px;
 }
-.heading1{
+
+.heading1 {
   font-family: "Montserrat";
   font-size: 3rem;
   text-transform: uppercase;
 }
-.mainbody{
+
+.mainbody {
   min-height: 90%;
 }
 
-p{
+.top-margin {
+  margin-top: 20vh;
+}
+
+p {
   margin-right: 15%;
   margin-left: 15%;
   font-family: 'Montserrat';
   text-align: center;
 }
-.container{
+
+.container {
+  margin-top: 20vh;
   text-align: center;
   font-weight: bold;
   font-family: 'Montserrat';
