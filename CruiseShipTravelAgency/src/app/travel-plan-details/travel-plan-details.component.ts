@@ -86,7 +86,6 @@ export class TravelPlanDetailsComponent implements OnInit {
   }
 
   navigate() {
-    console.log("date: " + this.travelPlan.departureDate);
     this.router.navigate(['/book'], {
       queryParams: {
         departureDate: this.departureDate,

@@ -2,9 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TravelPlanService} from "../services/travel-plan.service";
 import {ActivatedRoute, Router, NavigationEnd} from "@angular/router";
 import {CruiseShipService} from '../services/cruise-ship.service';
-
-import {filter} from 'rxjs/operators';
-import {DatePipe, getLocaleDateFormat} from "@angular/common";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-reservation',
@@ -42,10 +40,10 @@ export class ReservationComponent implements OnInit {
         this.departureDate = params['departureDate'],
         this.travelPlanID = params['planId']
     });
-    this.cruiseShipService.getCruiseShip(this.shipId).subscribe(res=>{
+    this.cruiseShipService.getCruiseShip(this.shipId).subscribe(res => {
       this.shipName = res.data.cruiseship.shipName;
     })
-    this.travelPlanService.getTravelPlan(this.travelPlanID).subscribe(res =>{
+    this.travelPlanService.getTravelPlan(this.travelPlanID).subscribe(res => {
       this.travelPlanName = res.data.travelplans
       this.travelPlanName = this.travelPlanName.travelPlanRegion
     })
@@ -81,7 +79,8 @@ export class ReservationComponent implements OnInit {
 
 
   }
-  back(){
+
+  back() {
     this.router.navigate(['/travelplan', this.travelPlanID], {
       queryParams: {
         departureDate: this.departureDate,
@@ -90,5 +89,18 @@ export class ReservationComponent implements OnInit {
     });
   }
 
+  startReservation(roomClass) {
+    console.log("starting reservation...");
+    this.router.navigate(["/book"], {
+      relativeTo: this.route,
+      queryParams: {
+        roomClass: roomClass
+      },
+      queryParamsHandling: 'merge',
+    });
+
+  }
 }
+
+
 

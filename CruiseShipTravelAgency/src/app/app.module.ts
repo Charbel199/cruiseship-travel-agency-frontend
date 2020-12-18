@@ -25,6 +25,7 @@ import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.compone
 import { AddtravelplanComponent } from './addtravelplan/addtravelplan.component';
 import { AddstopComponent } from './addstop/addstop.component';
 import { AddcrewmemberComponent } from './addcrewmember/addcrewmember.component';
+import { ReservationConfirmationComponent } from './reservation-confirmation/reservation-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AddcrewmemberComponent } from './addcrewmember/addcrewmember.component'
     AdminDashboardComponent,
     AddtravelplanComponent,
     AddstopComponent,
-    AddcrewmemberComponent
+    AddcrewmemberComponent,
+    ReservationConfirmationComponent
   ],
   imports: [
     BrowserModule,
