@@ -36,13 +36,13 @@
                  <span></span>
             </div>
             <div class="to">
-              <h1>.</h1>
+              <h1><br></h1>
             </div>
           </div>
 
           <div class="details">
             <div class="left-side">
-              <h5>Date:<br><span>{{substringDate(reservation.departureDate.toString())}}</span></h5>
+              <h5>Date:<br><span>{{reservation.departureDate | date: 'mediumDate'}}</span></h5>
               <h5>Price<br><span>{{reservation.reservationPrice}}$</span></h5>
             </div>
             <div class="right-side">
@@ -62,8 +62,8 @@
           <h3>{{this.customerService.loggedInCustomer.customerFirstName}} {{this.customerService.loggedInCustomer.customerLastName}}</h3>
           <div class="text-barcode">
             <div class="flight-gate">
-              <h5><span>{{this.travelPlans[i].travelPlanRegion}}</span></h5>
-              <h5>Ticket Id: <span>{{reservation.ticketCustomerId}}</span></h5>
+              <h5 class="bottom-ticket"><span>{{this.travelPlans[i].travelPlanRegion}}</span></h5>
+              <h5 class="bottom-ticket">Ticket Id: <span>{{reservation.ticketCustomerId}}</span></h5>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CustomerService} from "../services/customer.service";
 import {ReservationService} from "../services/reservation.service";
 import {TravelPlanService} from "../services/travel-plan.service";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-profile',
@@ -11,6 +12,7 @@ import {TravelPlanService} from "../services/travel-plan.service";
 export class ProfileComponent implements OnInit {
   reservations;
   travelPlans = [];
+  date = new DatePipe('en-US');
   constructor(
     private customerService: CustomerService,
     private reservationService: ReservationService,
@@ -18,6 +20,7 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     this.reservationService.getAllReservations().subscribe( res => {
       this.reservations = res.data.reservations;
       console.log(this.reservations);

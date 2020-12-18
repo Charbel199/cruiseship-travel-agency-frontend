@@ -25,7 +25,7 @@ export class ReservationComponent implements OnInit {
   rooms = [];
   oldRoomTypesLength = 0;
   shipName;
-  date;
+  date = new DatePipe('en-US');
 
   constructor(private travelPlanService: TravelPlanService,
               private cruiseShipService: CruiseShipService,
@@ -34,7 +34,6 @@ export class ReservationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.date = new DatePipe('en-US');
     this.route.queryParams.subscribe(params => {
       this.shipId = params['shipId'],
         this.departureDate = params['departureDate'],

@@ -28,7 +28,7 @@ export class ReservationConfirmationComponent implements AfterViewInit {
   rooms = [];
   oldRoomTypesLength = 0;
   shipName;
-  date;
+  date = new DatePipe('en-US');
   roomTypesArray;
   roomClass;
   roomPicture;
@@ -46,7 +46,6 @@ export class ReservationConfirmationComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.date = new DatePipe('en-US');
 
     this.route.queryParams.subscribe(params => {
       this.shipId = params['shipId'],
